@@ -1,0 +1,32 @@
+@extends('template.layout')
+
+@section('content')
+<section class="news-page">
+    <div class="container">
+        <h3 class="page__header">Tin tức An Vui</h3>
+        
+        @foreach($data as $key => $value)
+        <div class="news-item">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <div class="news-item__thumb">
+                        <a href="{{ $value->link }}" title="{{ $value['title'] }}"><img src="{{ $value['img'] }}" class="img-fluid" title="{{ $value['title'] }}" alt="{{ $value['title'] }}"></a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                    <h2 class="news-item__title"><a href="{{ $value->link }}" title="{{ $value['title'] }}">{{ $value['title'] }}</a></h2>
+                    <div class="news-item__desc">
+                        {{ $value['desc'] }}
+                    </div>
+                    <p class="news-item__date">Ngày đăng: {{ $value['created_at_format'] }}</p>
+                </div>    
+            </div>
+        </div>
+        @endforeach
+
+        <nav>
+            {{ $data->links() }}
+        </nav>
+    </div>
+</section>
+@endsection
