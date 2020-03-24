@@ -15,18 +15,17 @@
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('favicon.png') }}">
 
     <meta name="author" content="namdoanquoc.1998@gmail.com">
-    <meta property="og:image" content="">
-    <meta property="og:description" content="">
+    <meta property="og:image" content="{{ asset('imgs/img-home2.png') }}">
+    <meta property="og:description" content="AN VUI là đơn vị Công nghệ đầu tiên tại Việt Nam xây dựng hệ thống phần mềm tổng thể cho ngành vận tải hành khách. Nhằm giúp các nhà vận tải chủ động trong quản lý, nâng cao năng lực cạnh tranh từ đó giữ vững thị phần và mở rộng quy mô.">
     <meta property="og:image:type" content="">
     <meta property="og:image:width" content="">
     <meta property="og:image:height" content="">
     <meta property="og:image:alt" content="AnVui.vn - Đi an về vui">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AnVui.vn -  Đi an về vui</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap&subset=vietnamese">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}?v=1.0.0">
 </head>
 <body>
     @php 
@@ -36,7 +35,6 @@
         <div class="pushy-content">
             <ul>
                 <!-- Submenu -->
-                <li class="pushy-link"><a href="{{ route('home.index') }}" title="">Trang chủ</a></li>
                 <li class="pushy-link"><a href="{{ route('home.index') }}" title="">Trang chủ</a></li>
                 <li class="pushy-link"><a href="{{ route('intro.index') }}" title="">Giới thiệu</a></li>
                 <li class="pushy-link"><a href="{{ route('page.software') }}" title="">Phần mềm nhà xe</a></li>
@@ -68,13 +66,13 @@
                                 <li><a href="{{ route('recruit.index') }}">Tuyển dụng</a></li>
                                 <li class="language">
                                     @if( str_replace('_', '-', app()->getLocale()) == 'vi' )
-                                    <a href="javascript:;"> <img src="{{ asset('imgs/flag/vn.png') }}" title="" alt=""> Tiếng việt</a>
+                                    <a href="javascript:;"> <span class="avicon icon-vn"></span> Tiếng việt</a>
                                     @else
-                                    <a href="javascript:;"> <img src="{{ asset('imgs/flag/us.png') }}" title="" alt=""> English</a>
+                                    <a href="javascript:;"> <span class="avicon icon-us"></span> English</a>
                                     @endif
                                     <ul class="avnavbar__dropdown">
-                                        <li><a href="{{ route('lang','en') }}" title=""><img src="{{ asset('imgs/flag/us.png') }}" title="" alt=""> English</a></li>
-                                        <li><a href="{{ route('lang','vi') }}" title=""><img src="{{ asset('imgs/flag/vn.png') }}" title="" alt=""> Tiếng Việt</a></li>
+                                        <li class="d-none"><a href="{{ route('lang','en') }}" title=""><span class="avicon icon-us"></span> English</a></li>
+                                        <li><a href="{{ route('lang','vi') }}" title=""><span class="avicon icon-vn"></span> Tiếng Việt</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -346,7 +344,7 @@
         </div>
     </div>
 
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}?v=1.0.0"></script>
     
     @if( session('ACTION_STATUS') != null )
         @if (session('ACTION_STATUS') == 'SUCCESS')

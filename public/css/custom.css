@@ -19,7 +19,9 @@ ul, p, label, h1,h2,h3,h4,h5,h6 { margin: 0; }
 .agreement_check-error {
     display: none;
 }
-
+.avicon {
+    display: inline-block;
+}
 @-webkit-keyframes action {
     0% { transform: translateY(0); }
     100% { transform: translateY(30px); }
@@ -260,7 +262,7 @@ ul, p, label, h1,h2,h3,h4,h5,h6 { margin: 0; }
 
 .avheader{
     min-height: 80vh;
-    background-image: url("../imgs/bg-banner.png");
+    background-image: url("../imgs/bg-banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -330,12 +332,10 @@ ul, p, label, h1,h2,h3,h4,h5,h6 { margin: 0; }
     position: relative;
 }
 .avnavbar__right .language a {
-    display: block;
+    display: flex;
+    align-items: center;
 }
-.avnavbar__right .language img{
-    width: 22px;
-    height: 22px;
-    border-radius: 100%;
+.avnavbar__right .language .avicon{
     margin-right: 6px;
 }
 .avnavbar__right .language .icon-lang{
@@ -357,7 +357,7 @@ ul, p, label, h1,h2,h3,h4,h5,h6 { margin: 0; }
     transition: .4s ease-in-out;
 }
 .avnavbar__dropdown li {
-    margin-top: 10px;
+    margin-top: 16px;
     width: 100%;
 }
 /* /NAVBAR */
