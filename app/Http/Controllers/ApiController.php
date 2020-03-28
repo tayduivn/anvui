@@ -3,48 +3,28 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Model\News as NewsModel;
 
 class ApiController extends Controller
 {
     public function getNews(Request $request) {
+        $newsModel = new NewsModel();
         $page = $request->p ?? 1;
+        $limit = $request->limit ?? 5;
+		$start = ($page - 1)*$limit;
+        
+        $listNews = $newsModel->getNewses()->orderBy('created_at', 'DESC')->offset($start)->limit($limit)->get();
 
-        dd($page);
+        $res = [];
+
+        foreach ($listNews as $key => $value) {
+            $res[$key]['img'] = asset($value['img']);
+			$res[$key]['title'] = $value['title'];
+			$res[$key]['meta_description'] = $value['desc'];
+			$res[$key]['time'] = date('d/m/Y', $value['created_at']->format('U'));
+			$res[$key]['link'] = route('news.detail.old', [ 'slug' => str_slug($value['title'], "-"), 'id' => $value['id'] ]);
+        }
+
+        return response()->json($res);
     }
 }
-	// function apiNews(){
-	// 	$p = $this->r->get_int('p');
-	// 	$p = (empty($p))?1:$p;
-	// 	$limit = 5;
-	// 	$start = ($p-1)*$limit;
-
-	// 	$this->data['pagenow'] = $p;
-	// 	$this->data['pagenext'] = $p+1;
-
-	// 	if($p > 1)
-	// 		$this->data['pagepre'] = $p-1;
-
-	// 	$newsM = $this->getModel('av_news');
-	// 	$newsM->where('show_pm',1);
-	// 	$newsM->orderBy('id','DESC');
-	// 	$this->data['news'] = $newsM->get(null,array($start,$limit));
-
-
-	// 	if( count($this->data['news']) < 5 ){
-	// 		$this->data['pagenext'] = 0;
-	// 	}
-
-	// 	$results = array();
-	// 	foreach ($this->data['news'] as $key => &$value) {
-	// 		$results[$key]['img'] = 'https://anvui.vn/cdn/'.$value['img'];
-	// 		$results[$key]['title'] = $value['title'];
-	// 		$results[$key]['meta_description'] = $value['brief_content'];
-	// 		$results[$key]['time'] = date("d/m/Y",$value['time']);
-	// 		$results[$key]['link'] = 'http://anvui.vn/'.fixtitle($value['title']).'-'.$value['id'].'.html';
-	// 	}
-
- 	// 	header('Content-Type: application/json');
-	// 	echo json_encode($results); 
-	// 	die; 
-
-	// } 

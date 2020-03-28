@@ -10,7 +10,7 @@ class BaseModel extends Model
 
     function __construct() {
         parent::__construct();
-        $this->lang = app()->getLocale();
+        $this->lang = app()->getLocale() ?? "vi";
     }
 
     protected function _setModel($model, $filter) {
