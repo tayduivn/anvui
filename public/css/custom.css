@@ -262,6 +262,7 @@ ul, p, label, h1,h2,h3,h4,h5,h6 { margin: 0; }
 
 .avheader{
     min-height: 80vh;
+    min-height: 80vh;
     background-image: url("../imgs/bg-banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
