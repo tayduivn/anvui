@@ -17,10 +17,16 @@ Route::middleware(['web'])->group(function () {
     Route::get('/gioi-thieu', 'IntroController@index')->name('intro.index');
     Route::get('/tin-tuc', 'NewsController@index')->name('news.index');
     Route::get('/tin-tuc/{id}/{slug}.html', 'NewsController@detail')->name('news.detail');
+    Route::get('/{slug}-{id}.html', 'NewsController@detail')
+            ->where('slug', '[a-zA-Z0-9-_]+')
+            ->where('id', '[0-9]+')
+            ->name('news.detail.old');
 
     Route::get('/tuyen-dung', 'RecruitController@index')->name('recruit.index');
     Route::get('/tuyen-dung/{id}/{slug}.html', 'RecruitController@detail')->name('recruit.detail');
     Route::get('/gioi-thieu-phan-mem', 'PageController@pageSofwareIntro')->name('page.software');
 
     Route::post('/register_use', 'RegisterUseController@store')->name('register_use.store');
+
+    Route::get('/apinews', 'ApiController@getNews')->name('api.news.get');
 });

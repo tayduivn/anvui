@@ -266,6 +266,7 @@ ul, p, label, h1,h2,h3,h4,h5,h6 { margin: 0; }
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
+    max-height: 500px
 }
 /* NAVBAR */
 .avnavbar {
@@ -719,7 +720,7 @@ ul, p, label, h1,h2,h3,h4,h5,h6 { margin: 0; }
     line-height: 28px;
     color: #232731;
 }
-
+.modal--register__form .form-group input[type=number],
 .modal--register__form .form-group input[type=text] {
     background: #FFFFFF;
     border: 1px solid #CFD3DB;
@@ -727,7 +728,7 @@ ul, p, label, h1,h2,h3,h4,h5,h6 { margin: 0; }
     border-radius: 8px;
     height: 48px;
 }
-.modal--register__form .form-group input[type=text]:focus {
+.modal--register__form .form-group input:focus {
     border: 2px solid #084388;
 }
 .modal--register__form .input-style {

@@ -71,46 +71,5 @@ class NewsController extends Controller
         ]);
     }
 
-    // Define data for query.
-    // NOTICE: JUST USE FOR MAIN OBJECT (NEWS)
-    // public function setFilter($filter = []) {
-    //     $title_filter = [];
-    //     if (isset($filter['title'])) {
-    //         $title = $filter['title'];
-    //         $title_filter = [$this->lang . '_news.title', 'LIKE', "%{$title}%"];
-    //     }
-
-    //     $id_filter = [];
-
-    //     if (isset($filter['id_view'])) {
-    //         $id_filter = [$this->lang . '_news.id', $filter['id_view']];
-    //     }
-
-    //     $status_filter = [];
-    //     if (isset($filter['status'])) {
-    //         $status_filter = [$this->lang . '_news.status', $filter['status']];
-    //     }
-
-    //     $this->filter['where'] = [
-    //         $status_filter,
-    //         $title_filter,
-    //         $id_filter,
-    //     ];
-
-
-    //     foreach ($this->filter['where'] as $key => $value) {
-    //         if (count($value) == 0) {
-    //             unset($this->filter['where'][$key]);
-    //         }
-    //     }
-
-
-    //     $this->filter['set']['orderBy'] = ['created_at', 'DESC'];
-
-    //     if (isset($filter['pagination'])) {
-    //         $this->filter['pagination'] = $filter['pagination'];
-    //     }
-    // }
-
 }
 
