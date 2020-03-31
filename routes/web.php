@@ -40,7 +40,7 @@ Route::middleware(['web'])->group(function () {
         Route::get('/apinews', 'ApiController@getNews')->name('api.news.get');
         Route::get('/admin/login', 'Admin\LoginController@index')->name('admin.login.index');
         Route::post('/admin/login', 'Admin\LoginController@login')->name('admin.login');
-        Route::post('/admin/logout', 'Admin\LoginController@logout')->name('admin.logout');
+	Route::post('/admin/logout', 'Admin\LoginController@logout')->name('admin.logout');
 });
 
 Route::middleware(['web', 'isAdminLogin'])->group(function () { 
