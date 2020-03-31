@@ -66,7 +66,7 @@ export default {
             this.config.page = page;
         },
         remove(id) {
-            axios.post(api('news.reomve'), {id})
+            axios.post(api('news.remove'), {id})
             .then((response) => { 
                 this.getListNews();
             });

@@ -36,4 +36,14 @@ class UploadService
         } 
         return false;
     }
+
+
+    public function uploadFromFile($data) {
+        $path = date("Y") . '/' . date('m') . '/' . date('d') . '/' . time() .$data['name'];
+        // file_get_contents($request->media->getRealPath())
+        if( Storage::disk('public_uploads')->put($path, file_get_contents($data['realPath'])) ) {
+            return "upload/web/" . $path;
+        } 
+        return false;
+    }
 }

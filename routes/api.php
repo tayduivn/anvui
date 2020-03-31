@@ -22,6 +22,8 @@ Route::get('/news', "NewsController@get")->name('api.news.get');
 Route::get('/news/{id}', "NewsController@get")->name('api.news.getOne');
 Route::post('/news/remove', "NewsController@remove")->name('api.news.remove');
 
+Route::post('/media/upload', "MediaController@upload")->name('api.media.upload');
+
 Route::post('/fake/upload', function(){
     return response()->json([ 'status' => true ]);
 });

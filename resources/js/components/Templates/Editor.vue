@@ -28,6 +28,13 @@ export default {
                     'Verdana,Geneva,sans-serif': 'Verdana',
                     'Cabin': 'Cabin',
                 },
+                imageUploadParam: 'media',
+                imageUploadURL: api('media.upload'),
+                //imageUploadParams: {id: 'froala-editor'},
+                imageUploadMethod: 'POST',
+                imageMaxSize: 5 * 1024 * 1024,
+                imageAllowedTypes: ['jpeg', 'jpg', 'png', 'gif'],
+
                 events: {
                     contentChanged: () => {
                         this.$emit('contentChanged', this.value)

@@ -12,9 +12,7 @@ export default {
     components: {NewsCreate},
     data: function() {
         return {
-            data: {
-                title: "aaaaaaaaa"
-            },
+            data: {},
         }
     },
     created(){
@@ -24,7 +22,7 @@ export default {
         getNewsById() {
             let id = this.$route.params.id;
 
-            axios.get(`http://localhost/web/web_anvui/public/api/news/${id}`)
+            axios.get(`${api('news.store')}/${id}`)
             .then((response) => {
                 this.data = response.data; 
             })

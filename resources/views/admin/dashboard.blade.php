@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
     <script>
         var CONFIG = {
-            url: "https://anvui.vn"
+            url: "{{ env('APP_URL') }}"
         }
         var userInfo =  {
                 'id': "{{ Auth::user()->id }}",
