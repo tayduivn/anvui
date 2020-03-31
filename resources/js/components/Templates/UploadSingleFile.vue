@@ -5,7 +5,7 @@
         class="avatar-uploader" 
         :showUploadList="false"
         :multiple="false"
-        action="{{api('fake.upload') }}" 
+        action="api('fake.upload')" 
         :beforeUpload="beforeUpload" 
         @change="handleChange">
         <img v-if="imageUrl && !loading" class="img-preview" :src="imageUrl" alt="avatar" />
