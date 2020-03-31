@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+    <script>
+        var CONFIG = {
+            url: "{{ url('/') }}"
+        }
+        var userInfo =  {
+                'id': "{{ Auth::user()->id }}",
+                'username': "{{ Auth::user()->username }}",
+                'email': "{{ Auth::user()->email }}",
+            }
+    </script>
 </head>
 <body>
     <div id="app"></div>

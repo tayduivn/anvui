@@ -2,6 +2,8 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+require('./API')
+
 import App from './components/App.vue';
 
 import router from './router.js';

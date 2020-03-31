@@ -38,6 +38,7 @@
 
 <script>
 
+
 export default {
     data() {
         return {
@@ -65,7 +66,7 @@ export default {
             this.config.page = page;
         },
         remove(id) {
-            axios.delete(`http://localhost/web/web_anvui/public/api/news/remove`, {data:{id}})
+            axios.post(api('news.reomve'), {id})
             .then((response) => { 
                 this.getListNews();
             });
@@ -76,7 +77,7 @@ export default {
                 page: this.config.page,
             };
 
-            axios.get(`http://localhost/web/web_anvui/public/api/news?limit=${params.pageSize}&page=${params.page}`)
+            axios.get(`${api('news.get')}?limit=${params.pageSize}&page=${params.page}`)
             .then((response) => {
                 this.listNews = response.data.data,
                 this.config.total = response.data.total

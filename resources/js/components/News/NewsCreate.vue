@@ -159,8 +159,8 @@ export default {
                 this.content = this.data.content || "";
 
                 this.metaTitle = this.data.seo.meta_title || "";
-                this.metaKeyword = this.data.seo.meta_desc || "";
-                this.metaDesc = this.data.seo.meta_keyword || "";
+                this.metaKeyword = this.data.seo.meta_keyword || "";
+                this.metaDesc = this.data.seo.meta_desc || "";
                 
                 this.image = this.data.img || "";
                 this.status = this.data.status == 1 ? true : false;
@@ -189,7 +189,7 @@ export default {
                 }
             }
 
-            axios.post('http://localhost/web/web_anvui/public/api/news', params)
+            axios.post(api('news.store'), params)
             .then( (response) => {
                 if(response.data.status) {
                     this.$router.push({ name: 'NewsIndex'});

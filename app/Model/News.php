@@ -19,7 +19,6 @@ class News extends BaseModel
 
 
     public function getNewses($filter = []) {
-        
         $model = $this::where('news_trans.lang', $this->lang);
 
         if( isset($filter['status']) ) {
