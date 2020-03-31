@@ -9,7 +9,7 @@ class NewsTrans extends BaseModel
     public $table       = "news_trans";
     public $primayKey   = "id";
     public $incrementing = true;
-    public $timestamps   = true;
+    public $timestamps   = false;
     protected $dateFormat = 'U';
 
     function __construct() {

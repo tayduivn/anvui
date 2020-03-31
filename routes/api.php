@@ -16,3 +16,12 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/news', "NewsController@store")->name('api.news.insert');
+Route::get('/news', "NewsController@get")->name('api.news.get');
+Route::get('/news/{id}', "NewsController@get")->name('api.news.getOne');
+Route::delete('/news/{id}', "NewsController@remove")->name('api.news.remove');
+
+Route::post('/fake/upload', function(){
+    return response()->json([ 'status' => true ]);
+});

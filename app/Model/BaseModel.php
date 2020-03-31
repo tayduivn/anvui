@@ -61,7 +61,7 @@ class BaseModel extends Model
 
 	public function createContentFormatter($item, $route = 'news.detail' ,$dateFormat = 'd-m-Y h:i:s') {
 		if (!empty($item->created_at)) {
-			$item->created_at_format = date($dateFormat, $item->created_at->format('U'));
+			$item->created_at_format = date($dateFormat, $item->created_at);
 		} else {
 			$item->created_at_format = "";
 		}
@@ -73,7 +73,7 @@ class BaseModel extends Model
 		}
 
 		if (!empty($item->updated_at)) {
-			$item->updated_at_format = date($dateFormat, $item->updated_at->format('U'));
+			$item->updated_at_format = date($dateFormat, $item->updated_at);
 		} else {
 			$item->updated_at_format = "";
 		}
@@ -82,6 +82,16 @@ class BaseModel extends Model
 			$item->slug = str_slug($item->title, "-");
 		} else {
 			$item->slug = "";
+		}
+
+		if (empty($item->seo)) {
+			$item->seo = [
+				'meta_title' => '',
+				'meta_desc' => '',
+				'meta_keyword' => '',
+			];
+		} else {
+			$item->seo = json_decode($item->seo, true);
 		}
 
 		$item->link = route($route, [ 'slug' => $item->slug, 'id' => $item->id ]);

@@ -11,8 +11,8 @@ const mix = require('laravel-mix');
 |
 */
 
-// mix.js('resources/js/app.js', 'public/js')
-//     .sass('resources/sass/app.scss', 'public/css');
+mix.js('resources/js/app.js', 'public/js/admin.js')
+    .sass('resources/sass/app.scss', 'public/css/admin.css');
 
 mix.styles([
     'public/libs/font-awesome-4.7.0/css/font-awesome.min.css',
