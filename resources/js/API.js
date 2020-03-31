@@ -4,6 +4,7 @@ window.API = {
     "news.remove": 'news/remove', 
     
     "media.upload": 'media/upload'
+    'fake.upload': 'fake/upload'
 }
 
 window.api = function(name) {
