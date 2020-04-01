@@ -97,13 +97,16 @@
                 </div>
             </div>
         </nav>
+        
+
+
         <div class="banner">
             <div class="container">  
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col--12-ipad">
                         <div class="banner__content wow slideInLeft" data-wow-duration=".5s">
-                            <h1>Phần mềm quản lý nhà xe</h1>
-                            <p>AN VUI là đơn vị Công nghệ đầu tiên tại Việt Nam xây dựng hệ thống phần mềm tổng thể cho ngành vận tải hành khách. Nhằm giúp các nhà vận tải chủ động trong quản lý, nâng cao năng lực cạnh tranh từ đó giữ vững thị phần và mở rộng quy mô.</p>
+                            <h1>Nền tảng số hoá ngành vận tải hành khách đường dài.</h1>
+                            <p>AN VUI là  Doanh nghiệp đầu tiên tại Việt Nam cung cấp nền tảng công nghệ số hoá ngành vận tải hành khách đường dài. Giúp các nhà vận tải hành khách chuyển đổi số, chủ động quản trị khoa học, nâng cao năng lực cạnh tranh từ đó giữ vững thị phần và mở rộng quy mô.</p>
                             <a href="javascript:;" data-toggle="modal" data-target="#modal--register" class="btn--reg">DÙNG THỬ MIỄN PHÍ</a>
                         </div>    
                     </div>
