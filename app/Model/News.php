@@ -10,7 +10,7 @@ class News extends BaseModel
     public $table       = "news";
     public $primayKey   = "id";
     public $incrementing = true;
-    public $timestamps   = false;
+    public $timestamps   = true;
     protected $dateFormat = 'U';
 
     function __construct() {
