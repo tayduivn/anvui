@@ -5,7 +5,7 @@
         class="avatar-uploader" 
         :showUploadList="false"
         :multiple="false"
-        action="{{api('fake.upload') }}" 
+        :action="action" 
         :beforeUpload="beforeUpload" 
         @change="handleChange">
         <img v-if="imageUrl && !loading" class="img-preview" :src="imageUrl" alt="avatar" />
@@ -25,6 +25,7 @@
         props: ['url'],
         data() {
             return {
+                action: api('fake.upload'),
                 loading: false,
                 imageUrl: this.url || "",
             };

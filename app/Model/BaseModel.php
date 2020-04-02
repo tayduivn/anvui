@@ -61,7 +61,7 @@ class BaseModel extends Model
 
 	public function createContentFormatter($item, $route = 'news.detail' ,$dateFormat = 'd-m-Y h:i:s') {
 		if (!empty($item->created_at)) {
-			$item->created_at_format = date($dateFormat, $item->created_at);
+			$item->created_at_format = date($dateFormat, $item->created_at->format('U'));
 		} else {
 			$item->created_at_format = "";
 		}

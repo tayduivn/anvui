@@ -3,7 +3,7 @@ window.API = {
     "news.store": 'news', 
     "news.remove": 'news/remove', 
     
-    "media.upload": 'media/upload'
+    "media.upload": 'media/upload',
     'fake.upload': 'fake/upload'
 }
 
