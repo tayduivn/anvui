@@ -1,112 +1,93 @@
+
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>ANVUI ADMIN</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta charset="UTF-8">
+	<title>Đăng nhập</title>
+	<link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap&subset=vietnamese" rel="stylesheet">
+	<link rel="stylesheet" href=" {{ asset('libs/bootstrap-4.4.1/css/bootstrap.min.css') }}">
+	<script src="{{ asset('libs/jquery3.4.1/jquery3.4.1.js') }}"></script>
 </head>
-
 <body>
-    <img class="wave" src="{{ asset('imgs/admin/login/wave.png') }}">
-    <div class="container">
-        <div class="img">
-            <img src="{{ asset('imgs/admin/login/bg.svg') }}">
-        </div>
-        <div class="login-content">
-            <form action="{{ route('admin.login') }}" method="POST">
-                @csrf
-                <img src="{{ asset('imgs/admin/login/avatar.svg') }}">
-                <h2 class="title">Welcome</h2>
-                <div class="input-div one">
-                    <div class="i">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="div">
-                        <h5>Email</h5>
-                        <input type="text" class="input" name="email">
-                    </div>
-                </div>
-                <div class="input-div pass">
-                    <div class="i">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <div class="div">
-                        <h5>Password</h5>
-                        <input type="password" class="input"  name="password">
-                    </div>
-                </div>
-                <a style="visibility: hidden;" href="#">Forgot Password?</a>
-                @if (session('error.login'))
-                <label for="" class="error"> {{ session('error.login') }} </label>
-                @endif
-                <input type="submit" class="btn" value="Login">
-            </form>
-        </div>
-    </div>
-    <script>
-        const inputs = document.querySelectorAll(".input");
-
-
-        function addcl(){
-            let parent = this.parentNode.parentNode;
-            parent.classList.add("focus");
+	<section class="login">
+		<div class="container">
+			<div class="row">
+				<div class="col-3"></div>
+				<div class="col-6">
+					<form action="/index.php?mod=login&page=login" id="login" method="POST">
+						<h3>Đăng Nhập</h3>
+						<span class="error"></span>
+						<div class="form-group">
+							<label for="">Tên đăng nhập</label>
+							<input type="text" class="form-control" name="username" value="">
+							<label for="username" class="error"></label>
+						</div>
+						<div class="form-group">
+							<label for="">Mật khẩu</label>
+							<input type="password" class="form-control" name="password" value="">
+							<label for="password" class="error"></label>
+						</div>
+						<div class="form-group">
+							<button type="submit">Đăng nhập</button>
+						</div>
+					</form>
+				</div>
+				<div class="col-3"></div>
+			</div>
+			
+		</div>
+	</section>
+	<style>
+		* { font-family: Cabin;  }
+		.error { font-size: 13px; font-weight: 500; color: #dc3333; margin-bottom: 10px; }
+		.container{ margin-top: 10vh  }
+		body { background-color: #ebebeb  }
+		form h3 { margin-bottom: 24px; font-weight: 400  }
+		form{  padding: 55px; border-radius: 10px; background-color: #fff }
+		.form-group { margin-bottom: 36px;  }
+		.form-group label::first-child{font-size: 13px; font-weight: 500; padding-bottom: 11px; color: #555555; line-height: 1.4; text-transform: uppercase;   }
+		.form-group input { height: 45px;  }
+		.form-group input.invalid { border: 1px solid #dc3333; } 
+		label.error:empty{ display: none; }
+		button:focus{ outline: none; }
+		button{ font-size: 16px;
+            color: #fff;
+            display: flex;
+            line-height: 1.2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            min-width: 150px;
+            height: 55px; 
+                background-color: #333333;
+            border-radius: 27px;
+            border: none; 
         }
+	</style>
+	<script src=" {{ asset('libs/bootstrap-4.4.1/js/bootstrap.min.js') }}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+	<script>
+		$("#login").validate({ 
+			rules: {
+				username: {
+					required: true,	
+				},
+				password: {
+					required: true,
+				}
+			},
+			messages: {
+				username: {
+					required: "Vui lòng nhập tên đăng nhập.",
+				},
+				
+				password: {
+					required: "Vui lòng nhập mật khẩu.",
+				}
+			} 
 
-        function remcl(){
-            let parent = this.parentNode.parentNode;
-            if(this.value == ""){
-                parent.classList.remove("focus");
-            }
-        }
-
-
-        inputs.forEach(input => {
-            input.addEventListener("focus", addcl);
-            input.addEventListener("blur", remcl);
-        });
-    </script>
-    <style>
-        
-        @-webkit-keyframes tungtung {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(15px); }
-        }
-        @keyframes tungtung {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(15px); }
-        }
-        *{padding:0;margin:0;box-sizing:border-box}body{font-family:Poppins,sans-serif;overflow:hidden}
-        label.error{ color: #dc3333; font-weight: bold; font-size: 12.5px }
-        .wave{position:fixed;bottom:0;left:0;height:100%;z-index:-1}
-        .container{width:100vw;height:100vh;display:grid;grid-template-columns:repeat(2,1fr);grid-gap:7rem;padding:0 2rem}
-        .img{display:flex;justify-content:flex-end;align-items:center}
-        .login-content{display:flex;justify-content:flex-start;align-items:center;text-align:center}
-        .img img{width:500px; animation: tungtung 2s infinite alternate;}
-        form{width:360px}
-        .login-content img{height:100px}
-        .login-content h2{margin:15px 0;color:#333;text-transform:uppercase;font-size:2.9rem}
-        .login-content .input-div{position:relative;display:grid;grid-template-columns:7% 93%;margin:25px 0;padding:5px 0;border-bottom:2px solid #d9d9d9}
-        .login-content .input-div.one{margin-top:0}
-        .i{color:#d9d9d9;display:flex;justify-content:center;align-items:center}
-        .i i{transition:.3s}
-        .input-div>div{position:relative;height:45px}
-        .input-div>div>h5{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:#999;font-size:18px;transition:.3s}
-        .input-div:after,.input-div:before{content:'';position:absolute;bottom:-2px;width:0%;height:2px;background-color:#38d39f;transition:.4s}
-        .input-div:before{right:50%}
-        .input-div:after{left:50%}
-        .input-div.focus:after,.input-div.focus:before{width:50%}
-        .input-div.focus>div>h5{top:-16px;font-size:15px}
-        .input-div.focus>.i>i{color:#38d39f}
-        .input-div>div>input{background-color: #fff!important;position:absolute;left:0;top:0;width:100%;height:100%;border:none;outline:0;background:0 0;padding:.5rem .7rem;font-size:1rem;color:#555!important;font-family:poppins,sans-serif}
-        .input-div.pass{margin-bottom:4px}
-        a{display:block;text-align:right;text-decoration:none;color:#999;font-size:.9rem;transition:.3s}
-        a:hover{color:#38d39f}
-        .btn{display:block;width:100%;height:50px;border-radius:25px;outline:0;border:none;background-image:linear-gradient(to right,#32be8f,#38d39f,#32be8f);background-size:200%;font-size:1.2rem;color:#fff;font-family:Poppins,sans-serif;text-transform:uppercase;margin:1rem 0;cursor:pointer;transition:.5s}
-        .btn:hover{background-position:right}
-        @media screen and (max-width:1050px){.container{grid-gap:5rem}}@media screen and (max-width:1000px){form{width:290px}.login-content h2{font-size:2.4rem;margin:8px 0}.img img{width:400px}}@media screen and (max-width:900px){.container{grid-template-columns:1fr}.img{display:none}.wave{display:none}.login-content{justify-content:center}}
-    </style>
+		})
+	</script>
 </body>
-
 </html>

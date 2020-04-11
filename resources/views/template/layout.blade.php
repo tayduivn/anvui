@@ -39,7 +39,7 @@
                 <li class="pushy-link"><a href="{{ route('intro.index') }}" title="">Giới thiệu</a></li>
                 <li class="pushy-link"><a href="{{ route('page.software') }}" title="">Phần mềm nhà xe</a></li>
                 <li class="pushy-link"><a href="{{ route('news.index') }}" title="">Tin tức</a></li>
-                <li class="pushy-link"><a href="{{ route('recruit.index') }}" title="">Tuyển dụng</a></li>
+                {{-- <li class="pushy-link"><a href="{{ route('recruit.index') }}" title="">Tuyển dụng</a></li> --}}
             </ul>
         </div>
     </nav>
@@ -63,7 +63,7 @@
                                 <li><a href="{{ route('intro.index') }}">Giới thiệu</a></li>
                                 <li><a href="{{ route('page.software') }}">Phần mềm nhà xe</a></li>
                                 <li><a href="{{ route('news.index') }}">Tin tức</a></li>
-                                <li><a href="{{ route('recruit.index') }}">Tuyển dụng</a></li>
+                                {{-- <li><a href="{{ route('recruit.index') }}">Tuyển dụng</a></li> --}}
                                 <li class="language">
                                     @if( str_replace('_', '-', app()->getLocale()) == 'vi' )
                                     <a href="javascript:;"> <span class="avicon icon-vn"></span> Tiếng việt</a>
@@ -137,7 +137,7 @@
                                     <li><a href="{{ route('intro.index') }}" title="">Giới thiệu</a></li>
                                     <li><a href="{{ route('page.software') }}" title="">Phần mềm nhà xe</a></li>
                                     <li><a href="{{ route('news.index') }}" title="">Tin tức</a></li>
-                                    <li><a href="{{ route('recruit.index') }}" title="">Tuyển dụng</a></li>
+                                    {{-- <li><a href="{{ route('recruit.index') }}" title="">Tuyển dụng</a></li> --}}
                                     <li><a class="btn--reg" data-toggle="modal" data-target="#modal--register">DÙNG THỬ MIỄN PHÍ</a></li>
                                 </ul>
                             </div>

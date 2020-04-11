@@ -45,7 +45,13 @@ Route::middleware(['web'])->group(function () {
         Route::post('/media/upload', 'MediaController@upload')->name('media.upload');
 });
 
+Route::get('/admin', 'Admin\DashBoardController@index')->name('admin.index');
+Route::get('/admin/news', 'Admin\NewsController@index')->name('admin.news.index');
+Route::get('/admin/news/create', 'Admin\NewsController@create')->name('admin.news.create');
+Route::get('/admin/news/{id}', 'Admin\NewsController@create')->name('admin.news.edit');
+Route::post('/admin/news', 'Admin\NewsController@store')->name('admin.news.store');
+
 Route::middleware(['web', 'isAdminLogin'])->group(function () { 
-        Route::get('/admin', 'Admin\DashBoardController@index')->name('admin.index');
+        
 
 });
