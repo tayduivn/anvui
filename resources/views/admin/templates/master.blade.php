@@ -32,7 +32,7 @@
                 <div class="sidebar-logo">
                     <div class="peers ai-c fxw-nw">
                         <div class="peer peer-greed">
-                            <a class="sidebar-link td-n" href="https://colorlib.com/polygon/adminator/index.html" class="td-n">
+                            <a class="sidebar-link td-n" href="/" class="td-n">
                                 <div class="peers ai-c fxw-nw">
                                     <div class="peer">
                                         <div class="logo"><img src="https://colorlib.com/polygon/adminator/assets/static/images/logo.png"></div>
@@ -95,10 +95,10 @@
                                         style="height: 30px; width: 30px; display: inline-block; border-radius: 50%;"
                                         src="https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png"
                                         alt=""></div>
-                                <div><span class="fsz-sm c-grey-900">xevanminh</span></div>
+                                <div><span class="fsz-sm c-grey-900">Anvui</span></div>
                             </a>
                             <ul class="dropdown-menu fsz-sm">
-                                <li><a href="/index.php?mod=login&page=logout"
+                            <li><a href="{{ route('admin.logout') }}"
                                         class="d-b td-n pY-5 bgcH-grey-100 c-grey-700"><i
                                             class="ti-power-off mR-10"></i> <span>Logout</span></a></li>
                             </ul>

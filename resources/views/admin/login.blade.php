@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<title>Đăng nhập</title>
 	<link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap&subset=vietnamese" rel="stylesheet">
-	<link rel="stylesheet" href=" {{ asset('libs/bootstrap-4.4.1/css/bootstrap.min.css') }}">
-	<script src="{{ asset('libs/jquery3.4.1/jquery3.4.1.js') }}"></script>
+	<link rel="stylesheet" href="{{ asset('libs/bootstrap-4.4.1/css/bootstrap.min.css') }}">
+	<script src="{{ asset('libs/jquery-3.4.1/jquery-3.4.1.min.js') }}"></script>
 </head>
 <body>
 	<section class="login">

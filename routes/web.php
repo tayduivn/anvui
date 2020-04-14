@@ -48,6 +48,8 @@ Route::middleware(['web'])->group(function () {
 
 
 Route::middleware(['web', 'isAdminLogin'])->group(function () { 
+        Route::get('/admin/logout', 'Admin\LoginController@logout')->name('admin.logout');
+
         Route::get('/admin', 'Admin\DashBoardController@index')->name('admin.index');
         Route::get('/admin/news', 'Admin\NewsController@index')->name('admin.news.index');
         Route::get('/admin/news/create', 'Admin\NewsController@create')->name('admin.news.create');
