@@ -4,6 +4,7 @@
     {{-- anvuidevteam_meobeodamdang --}}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap&subset=vietnamese">
@@ -69,10 +70,8 @@
                             <span class="arrow"><i class="ti-angle-right"></i></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="sidebar-link" href="/index.php?mod=menu&page=index">tin tuyển dụng</a></li>
-                            <li><a class="sidebar-link" href="/index.php?mod=menu&page=index">Thêm tin tuyển dụng</a></li>
-                            <li><a class="sidebar-link" href="/index.php?mod=menu&page=index">Vị trí</a></li>
-                            <li><a class="sidebar-link" href="/index.php?mod=menu&page=index">Thêm Vị trí</a></li>
+                            <li><a class="sidebar-link" href="{{ route('admin.recruit.index') }}">tin tuyển dụng</a></li>
+                            <li><a class="sidebar-link" href="{{ route('admin.recruit.create') }}">Thêm tin tuyển dụng</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -120,18 +119,63 @@
             </footer> -->
         </div>
     </div>
-
-    <script src="{{ asset('libs/bootstrap-4.4.1/js/bootstrap.min.js') }}"></script>
-    <link href="{{ asset('libs/toastr/build/toastr.min.css') }}">
-    <script  src="{{ asset('libs/toastr/build/toastr.min.js') }}"></script>
-    <script src="https://ckeditor.com/apps/ckfinder/3.5.0/ckfinder.js"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/18.0.0/decoupled-document/ckeditor.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
-    <script src="{{ asset('js/admin.js') }}"?v="{{ time() }}"></script>
     <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
+    <script src="{{ asset('js/admin.vendor.js') }}?v={{ time() }}"></script>
+    <script  src="{{ asset('libs/ckeditor5/build/ckeditor.js') }}"></script>
+    <script src="{{ asset('js/admin.custom.js') }}?v={{ time() }}"></script>
+
+    <script>
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+    </script>
+    @if( session('GLOBAL_STATUS') != null )
+        @if (session('GLOBAL_STATUS') == 'SUCCESS')
+        <script>
+            $(window).on('load', function(){
+                toastr.success("{{Session::get('GLOBAL_MSG') }}")
+            });
+        </script>
+        @endif
+
+        @if (session('GLOBAL_STATUS') == 'ERROR')
+        <script>
+            $(window).on('load', function(){
+                toastr.error("{{Session::get('GLOBAL_MSG') }}")
+            })
+        </script>
+        @endif
+    @endif
+
+    @stack('scripts')
+    {{-- <script>
         let moduleContentBuilder = new ModuleContentBuilder({
             wrap: '#js--moduleContent',
         });
-    </script>
+    </script> --}}
+
+<script>
+    
+</script>
 </body>
 </html>

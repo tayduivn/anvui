@@ -26,6 +26,7 @@
     <title>AnVui.vn -  Đi an về vui</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap&subset=vietnamese">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}?v=1.0.2">
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}?v={{ time() }}">
 </head>
 <body>
     @php 
@@ -248,6 +249,75 @@
             <span>COPYRIGHT BY  <a href="">ANVUI</a> - 2020</span>
         </div>
     </footer>
+    <div class="modal modal--cv--reg" id="modal__cv--reg">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="modal--cv--reg_form">
+                            <form action="{{ route('register_use.store') }}" method="POST" id="js-form--reg_cv" enctype="multipart/form-data">
+                                @csrf
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                            <label for="">Họ tên: <span class="text-danger">*</span></label>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                            <input type="text" name="name" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                            <label for="">Email: <span class="text-danger">*</span></label>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                            <input type="text" name="email" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                            <label for="">Số điện thoại: <span class="text-danger">*</span></label>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                            <input type="number" name="phone" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                            <label for="">CV của bạn: <span class="text-danger">*</span></label>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                            {{-- <label for="js--cvfile" type="button" class="btn d-inline-block btn-send-cv">
+                                                Chọn file
+                                            </label> --}}
+                                            <input type="file" id="js--cvfile" name="cv" class="form-control">
+                                            <label for="cv" id="cv-error" class="error"></label>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
+                                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                            <button class="btn--reg" type="submit">Gửi thông tin </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="modal modal--register" id="modal--register">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -442,6 +512,52 @@
             submitHandler: function(form) {
                 form.submit();
             }
+        });
+
+        $('#js-form--reg_cv').validate({
+            rules: {
+                cv: {
+                    required: true,
+                    extension: "pdf"
+                },
+                name: {
+                    required: true,
+                    maxlength: 150,
+                },
+                email:  {
+                    required: true,
+                    maxlength: 150,
+                    email: true,
+                },
+                phone: {
+                    required: true,
+                    number: true
+                },
+                
+            },
+
+            messages: {
+                name: {
+                    required: "Họ tên không được để trống !",
+                    maxlength: "Họ tên tối đa 150 kí tự !",
+                },
+                email:  {
+                    required: "Email không được để trống !",
+                    maxlength: "Email tối đa 150 kí tự !",
+                    email: "Email không đúng định dạng !",
+                },
+                phone: {
+                    required: "Số điện thoại không được để trống !",
+                    number: "Số điện thoại không đúng định dạng!",
+                },
+                cv: {
+                    required: "CV không được bỏ trống !",
+                    extension: "Chỉ cho phép file pdf !"
+                }
+            },
+            // submitHandler: function(form) {
+            //     form.submit();
+            // }
         });
     });
     </script>

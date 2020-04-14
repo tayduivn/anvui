@@ -60,24 +60,26 @@ class News extends BaseModel
             'meta_keyword' => $params['meta_keyword'],
         ];
 
-        return $newsTransModel->where('news_id', $id)->update([
+        $newsTransModel->where('news_id', $id)->update([
             'title' => $params['title'],
             'content' => $params['content'],
-            'desc' => $params['desc'],
+            // 'desc' => $params['desc'],
             'lang' => $params['lang'],
             'seo' => json_encode($seo),
         ]);
+
+        return true;
     }
 
 
     public function insertNews($params) {
         $newsTransModel = new NewsTrans();
 
-        $newsId = $this->insertGetId([
-            'img' => $params['img'],
-            'status' => $params['status'],
-            'created_at' => time(),
-        ]);
+        isset($params['img']) ? $dataInsert['img'] = $params['img'] : "";
+        $dataInsert['status'] = $params['status'];
+        $dataInsert['created_at'] = time();
+
+        $newsId = $this->insertGetId($dataInsert);
         
         $seo = [
             'meta_title' => $params['meta_title'],
@@ -90,7 +92,7 @@ class News extends BaseModel
                 'title' => $params['title'],
                 'news_id' => $newsId,
                 'content' => $params['content'],
-                'desc' => $params['desc'],
+                // 'desc' => $params['desc'],
                 'lang' => $params['lang'],
                 'seo' => json_encode($seo),
             ]);

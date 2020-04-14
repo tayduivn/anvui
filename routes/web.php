@@ -45,13 +45,22 @@ Route::middleware(['web'])->group(function () {
         Route::post('/media/upload', 'MediaController@upload')->name('media.upload');
 });
 
-Route::get('/admin', 'Admin\DashBoardController@index')->name('admin.index');
-Route::get('/admin/news', 'Admin\NewsController@index')->name('admin.news.index');
-Route::get('/admin/news/create', 'Admin\NewsController@create')->name('admin.news.create');
-Route::get('/admin/news/{id}', 'Admin\NewsController@create')->name('admin.news.edit');
-Route::post('/admin/news', 'Admin\NewsController@store')->name('admin.news.store');
+
 
 Route::middleware(['web', 'isAdminLogin'])->group(function () { 
+        Route::get('/admin', 'Admin\DashBoardController@index')->name('admin.index');
+        Route::get('/admin/news', 'Admin\NewsController@index')->name('admin.news.index');
+        Route::get('/admin/news/create', 'Admin\NewsController@create')->name('admin.news.create');
+        Route::get('/admin/news/{id}', 'Admin\NewsController@create')->name('admin.news.edit');
+        Route::post('/admin/news', 'Admin\NewsController@store')->name('admin.news.store');
+        Route::post('/admin/news/remove', 'Admin\NewsController@remove')->name('admin.news.remove');
+        Route::post('/admin/news/update_status', 'Admin\NewsController@ajaxUpdateStatus')->name('admin.news.ajax.update_status');
         
+        Route::get('/admin/recruit', 'Admin\RecruitController@index')->name('admin.recruit.index');
+        Route::get('/admin/recruit/create', 'Admin\RecruitController@create')->name('admin.recruit.create');
+        Route::get('/admin/recruit/{id}', 'Admin\RecruitController@create')->name('admin.recruit.edit');
+        Route::post('/admin/recruit', 'Admin\RecruitController@store')->name('admin.recruit.store');
+        Route::post('/admin/recruit/remove', 'Admin\RecruitController@remove')->name('admin.recruit.remove');
+        Route::post('/admin/recruit/update_status', 'Admin\RecruitController@ajaxUpdateStatus')->name('admin.recruit.ajax.update_status');       
 
 });

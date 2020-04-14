@@ -14,13 +14,14 @@
 			<div class="row">
 				<div class="col-3"></div>
 				<div class="col-6">
-					<form action="/index.php?mod=login&page=login" id="login" method="POST">
+					<form action="{{ route('admin.login') }}" id="login" method="POST">
+						@csrf
 						<h3>Đăng Nhập</h3>
 						<span class="error"></span>
 						<div class="form-group">
 							<label for="">Tên đăng nhập</label>
-							<input type="text" class="form-control" name="username" value="">
-							<label for="username" class="error"></label>
+							<input type="text" class="form-control" name="email" value="">
+							<label for="email" class="error"></label>
 						</div>
 						<div class="form-group">
 							<label for="">Mật khẩu</label>
@@ -70,7 +71,7 @@
 	<script>
 		$("#login").validate({ 
 			rules: {
-				username: {
+				email: {
 					required: true,	
 				},
 				password: {
@@ -78,7 +79,7 @@
 				}
 			},
 			messages: {
-				username: {
+				email: {
 					required: "Vui lòng nhập tên đăng nhập.",
 				},
 				

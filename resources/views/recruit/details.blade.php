@@ -16,7 +16,7 @@
                             <p>Thời gian: {{ $data->time_type_string }}</p>
                             <p>Địa điểm: {{ $data->place }}</p>
                             <p>Mức lương: {{ $data->salary_string }}</p>
-                            <a href="javascript:;" data-toggle="modal" data-target="#modal--cv--reg">Gửi CV cho chúng tôi!</a>
+                            <a href="javascript:;" data-toggle="modal" data-target="#modal__cv--reg">Gửi CV cho chúng tôi!</a>
                         </div>
                     </div>
                 </div>

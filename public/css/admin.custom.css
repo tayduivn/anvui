@@ -2,12 +2,24 @@
     font-size: 16px;
     font-family: Cabin;
 }
+body,p,ul,li,label, h1, h2, h3, h4, h5, h6{
+    font-family: Cabin;
+    margin: 0;
+    line-height: 1
+}
+.font-weight-500{font-weight: 500;}
 
 .pagination {
     display: inline-flex;
 }
 .aveditor {
     min-height: 500px; 
+    border: none!important;
+}
+
+.aveditor__toolbar .ck.ck-toolbar {
+    border: none;
+    padding: 10px;
 }
 
 .seo__preview { padding: 24px 0px; }
@@ -48,7 +60,7 @@
 
 #mainContent {
     padding: 24px;
-    background-color: #fff;
+    background-color: #f1f4f6;
 }
 .avinput [type="checkbox"]:checked,
 .avinput [type="checkbox"]:not(:checked),
