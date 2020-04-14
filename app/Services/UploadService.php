@@ -39,7 +39,20 @@ class UploadService
 
 
     public function uploadFromFile($data) {
-        $path = date("Y") . '/' . date('m') . '/' . date('d') . '/' .$data['name'] . "_" . time();
+        if( !isset($data['path']) ) {
+            $path = date("Y") . '/' . date('m') . '/' . date('d') . '/' . time() . "_" . $data['name'];
+            $pathDir = date("Y") . '/' . date('m') . '/' . date('d');
+        } else {
+            $path = $data['path'] . "/"  . time() . "_" . $data['name'];
+            $pathDir = $data['path'];
+        }
+        
+        try {
+            mkdir(public_path() . '/upload/' . $pathDir, 0777, true);
+        } catch(\Exception $e) {
+
+        }
+        
         // file_get_contents($request->media->getRealPath())
         if( Storage::disk('public_uploads')->put($path, file_get_contents($data['realPath'])) ) {
             return "upload/web/" . $path;

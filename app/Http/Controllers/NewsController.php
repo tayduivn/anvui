@@ -22,11 +22,10 @@ class NewsController extends Controller
         $newsModel = new NewsModel();
 
         $header = [
-            'meta_title' => 'Tin tức',
-            'meta_keyword' => 'Tin tức',
-            'meta_description' => 'Tin tức',
+            'meta_title' => 'Tin tức - anvui.vn',
         ];
 
+        
         // $this->setFilter($request->only(['title', 'pagination', 'id_view']));
 
         $data = $newsModel->getNewses(['status' => 1])->orderBy('created_at', 'DESC')->paginate($this->filter['pagination']);
@@ -34,8 +33,8 @@ class NewsController extends Controller
         foreach($data as $key => &$value) {
             $value = $newsModel->createContentFormatter($value, 'news.detail' ,'d/m/Y');
         }
-        
-        // $this->setHeader($header);
+
+        $this->setHeader($header);
 
         return view("news.index")->with(['data' => $data]);
     }
@@ -58,13 +57,14 @@ class NewsController extends Controller
         foreach($newsRelated as $key => &$value) {
             $value = $newsModel->createContentFormatter($value, 'news.detail' ,'d/m/Y');
         }
-        // $header = [
-        //     'meta_title' => empty($data->meta_title) ? $data->title : $data->meta_title,
-        //     'meta_keyword' => $data->meta_keyword,
-        //     'meta_description' => empty($data->short) ? $data->short : $data->meta_description,
-        // ];
 
-        // $this->setHeader($header);
+        $header = [
+            'meta_title' => empty($data['seo']['meta_title']) ? $data['title'] : $data['seo']['meta_title'],
+            'meta_keyword' => $data['seo']['meta_keyword'],
+            'meta_description' => $data['seo']['meta_desc'],
+        ];
+        
+        $this->setHeader($header);
 
         return view("news.details")->with([
             'data' => $data,

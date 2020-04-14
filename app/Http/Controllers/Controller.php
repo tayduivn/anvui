@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -10,6 +12,16 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function setHeader($data) {
+        
+        $header['metaTitle'] = !empty($data['meta_title']) ? $data['meta_title']  : config('HEADER')['metaTitle'];
+        $header['metaDesc'] = !empty($data['meta_desc']) ? $data['meta_desc']  : config('HEADER')['metaDesc'];
+        $header['metaKeyword'] = !empty($data['meta_keyword']) ? $data['meta_keyword']  : config('HEADER')['metaKeyword'];
+        
+        Config::set('HEADER', $header);
+        View::share('HEADER', $header );
+    }
 
     public function createSeoArrayFromRequest($request) {
         $seo = [

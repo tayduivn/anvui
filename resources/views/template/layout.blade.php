@@ -14,16 +14,26 @@
     <!-- Standard iPhone Touch Icon--> 
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('favicon.png') }}">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ $HEADER['metaTitle'] }}</title>
+    <meta name="description" content="{{ $HEADER['metaDesc'] }}"/>
+    <meta name="keyword" content="{{ $HEADER['metaKeyword'] }}"/>
+
     <meta name="author" content="namdoanquoc.1998@gmail.com">
     <meta property="og:image" content="{{ asset('imgs/img-home2.png') }}">
-    <meta property="og:description" content="AN VUI là đơn vị Công nghệ đầu tiên tại Việt Nam xây dựng hệ thống phần mềm tổng thể cho ngành vận tải hành khách. Nhằm giúp các nhà vận tải chủ động trong quản lý, nâng cao năng lực cạnh tranh từ đó giữ vững thị phần và mở rộng quy mô.">
+    <meta property="og:title" content="{{ $HEADER['metaTitle'] }}">
+    <meta property="og:description" content="{{ $HEADER['metaDesc'] }}">
     <meta property="og:image:type" content="">
     <meta property="og:image:width" content="">
     <meta property="og:image:height" content="">
-    <meta property="og:image:alt" content="AnVui.vn - Đi an về vui">
+    <meta property="og:image:alt" content="">
+
+    <meta name=twitter:description content="{{ $HEADER['metaDesc'] }}">
+    <meta name=twitter:title content="{{ $HEADER['metaTitle'] }}">
+    <meta name=twitter:site content="">
+    <meta name=twitter:image content="">
+    <meta name=twitter:creator content="">
     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnVui.vn -  Đi an về vui</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap&subset=vietnamese">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}?v=1.0.2">
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}?v={{ time() }}">

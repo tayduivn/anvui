@@ -21,7 +21,7 @@ class ApiController extends Controller
             $res[$key]['img'] = asset($value['img']);
 			$res[$key]['title'] = $value['title'];
 			$res[$key]['meta_description'] = $value['desc'];
-			$res[$key]['time'] = date('d/m/Y', $value['created_at']);
+			$res[$key]['time'] = $value['created_at']->format('d/m/Y');
 			$res[$key]['link'] = route('news.detail.old', [ 'slug' => str_slug($value['title'], "-"), 'id' => $value['id'] ]);
         }
 
