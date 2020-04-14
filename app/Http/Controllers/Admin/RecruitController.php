@@ -92,7 +92,7 @@ class RecruitController extends Controller
         if($request->img) {
             $uploadService = new UploadService();
             $data = [
-                'name' => str_slug($params['title'], "-"),
+                'name' => str_slug($params['title'], "-") . "." . $request->img->getClientOriginalExtension(),
                 'realPath' => $request->img->getRealPath()
             ];
             $img = $uploadService->uploadFromFile($data);

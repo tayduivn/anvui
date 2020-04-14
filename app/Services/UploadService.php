@@ -43,17 +43,23 @@ class UploadService
             $path = date("Y") . '/' . date('m') . '/' . date('d') . '/' . time() . "_" . $data['name'];
             $pathDir = date("Y") . '/' . date('m') . '/' . date('d');
         } else {
-            $path = $data['path'] . "/"  . time() . "_" . $data['name'];
-            $pathDir = $data['path'];
+                $path = $data['path'] . "/"  . time() . "_" . $data['name'];
+                $pathDir = $data['path'];
         }
-        
-        try {
-            mkdir(public_path() . '/upload/' . $pathDir, 0777, true);
-        } catch(\Exception $e) {
 
+        if( env('APP_ENV') != 'local' ) {
+            $path = time() . "_" . $data['name'];
+            $pathDir = "";
         }
         
-        // file_get_contents($request->media->getRealPath())
+        if( env('APP_ENV') != 'local' ) {
+            try {
+                mkdir(public_path() . '/upload/' . $pathDir, 0777, true);
+            } catch(\Exception $e) {
+
+            }
+        }
+        
         if( Storage::disk('public_uploads')->put($path, file_get_contents($data['realPath'])) ) {
             return "upload/web/" . $path;
         } 
