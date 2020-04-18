@@ -110,7 +110,7 @@ class Recruit extends BaseModel
 
         if($recuitId) {
             return $recruitTransModel->insert([
-                'recruit_id' => $params['recuitId'],
+                'recruit_id' => $recuitId,
                 'content' => $params['content'],
                 // 'desc' => $params['desc'],
                 'lang' => $params['lang'],
