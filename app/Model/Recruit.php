@@ -83,7 +83,7 @@ class Recruit extends BaseModel
     }
 
 
-    public function insertRecruit($id, $params) {
+    public function insertRecruit($params) {
         $recruitTransModel = new RecruitTrans();
 
         $dataInsert = [
