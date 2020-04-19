@@ -16,13 +16,14 @@ class RegisterUseController extends Controller
             'company_name' => $request->company_name,
             'phone' => $request->phone,
             'address' => $request->address,
+            'created_at' => time(),
         ];
 
         try {
             $registerUseModel->insert($params);
 
             $request->session()->flash('ACTION_STATUS', 'SUCCESS');
-            $request->session()->flash('ACTION_MSG', 'Đăng ký thành công ! Chúng tôi sẽ liên hệ với bạn trong chốc lát.');
+            $request->session()->flash('ACTION_MSG', 'Đăng ký thành công ! Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.');
         } catch (\Exception $e) {
 
             $request->session()->flash('ACTION_STATUS', 'ERROR');
