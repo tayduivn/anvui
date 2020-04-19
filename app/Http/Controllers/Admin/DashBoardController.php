@@ -15,7 +15,7 @@ class DashBoardController extends Controller
         $registerUsemModel = new RegisterUseModel();
         $data['forms'] = $recruitFormModel->getRecruitsForm()->get();
 
-        $data['companies'] = $registerUsemModel->get();
+        $data['companies'] = $registerUsemModel->orderBy('id', 'desc')->get();
 
         return view('admin.dashboard.index', ['data' => $data]); 
     }
