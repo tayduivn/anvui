@@ -27,7 +27,7 @@ class RecruitController extends Controller
 
         // $this->setFilter($request->only(['title', 'pagination', 'id_view']));
 
-        $data = $recruitModel->getRecruits()->paginate($this->filter['pagination']);
+        $data = $recruitModel->getRecruits(['status' => 1])->paginate($this->filter['pagination']);
         
         foreach($data as $key => &$value) {
             $value = $recruitModel->createContentFormatter($value, 'recruit.detail' ,'d/m/Y');
@@ -50,9 +50,9 @@ class RecruitController extends Controller
         
         $data = $recruitModel->createContentFormatter($data, 'recruit.detail' ,'d/m/Y');
         $header = [
-            'meta_title' => empty($data->meta_title) ? $data->title : $data->meta_title,
-            'meta_keyword' => $data->meta_keyword,
-            'meta_description' => empty($data->short) ? $data->short : $data->meta_description,
+            'meta_title' => empty($data['seo']['meta_title']) ? $data->title : $data['seo']['meta_title'],
+            'meta_keyword' => $data['seo']['meta_keyword'],
+            'meta_description' => $data['seo']['meta_desc'],
         ];
 
         $this->setHeader($header);

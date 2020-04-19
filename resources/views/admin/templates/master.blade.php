@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>QUản trị AnVui.vn</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap&subset=vietnamese">
     <link rel="stylesheet" href="{{ asset('libs/bootstrap-4.4.1/css/bootstrap.min.css') }}"> 
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}?v={{ time() }}"> 
