@@ -61,6 +61,53 @@
             </div>
         </div>
         
+        <div class="listCV">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-9">
+                        <div class="avcollapse card">
+                            <div class="avcollapse__header" data-toggle="collapse" data-target="#listCV_body">
+                                Danh sách CV
+                            </div>
+                            <div class="avcollapse__body collapse show" id="listCV_body">
+                                <table class="avdatatable table table-bordered">
+                                    <thead>
+                                        <th>STT</th>
+                                        <th>Họ tên</th>
+                                        <th>Email</th>
+                                        <th>Số điện thoại</th>
+                                        <th>Ngày gửi</th>
+                                        <th></th>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($data['forms'] as $key => $value)
+                                        <tr class="{{ $value->status == 1 ? 'viewed' : "" }}" title="{{ $value->status == 1 ? 'ĐÃ XEM' : "CHƯA XEM" }}" >
+                                            <td>{{ $key + 1 }}</td>
+                                            <td>{{ $value->name }}</td>
+                                            <td>{{ $value->email }}</td>
+                                            <td>{{ $value->phone }}</td>
+                                            <td>{{ ($value->created_at) ? $value->created_at->format('d/m/Y') : "" }}</td>
+                                            <td>
+                                                <a href="{{ route('recruit.preViewCV', ['id' => $value['id']]) . "/?redirect_to=" . asset($value->file) }}" target="_blank" class="action action--warning"><i class="fa fa-eye"></i></a>
+                                                {{-- <form data-form-remove="{{$value['id']}}" id="formListCV{{$value['id']}}" action="{{ route('recruit.removeCV') }}" class="d-inline" method="POST">
+                                                    @csrf
+                                                    <input type="hidden" value="{{$value['id']}}" name="id">
+                                                    <button type="submit" form="formListCV{{$value['id']}}" data-action="remove" data-form-remove="{{$value['id']}}"
+                                                        class="action action--danger"><i class="fa fa-trash-o"></i></button>
+                                                </form> --}}
+                                            </td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
         <div class="newsCreate__seo">
             <div class="form-group">
                 <div class="row">
@@ -69,7 +116,7 @@
                             <div class="avcollapse__header" data-toggle="collapse" data-target="#newsCreate__seo__wrap">
                                 SEO
                             </div>
-                            <div class="avcollapse__body" id="newsCreate__seo__wrap">
+                            <div class="avcollapse__body collapse show" id="newsCreate__seo__wrap">
                                 @include('admin.templates.seo', ['metaTitle' => $data['seo']['meta_title'] ?? '', 'metaDesc' => $data['seo']['meta_desc'] ?? '', 'metaKeyword' => $data['seo']['meta_keyword'] ?? '',])
                             </div>
                         </div>
@@ -80,7 +127,7 @@
                                 data-target="#newsCreate__info__setting_wrap">
                                 Thông tin
                             </div>
-                            <div class="avcollapse__body" id="newsCreate__info__setting_wrap">
+                            <div class="avcollapse__body collapse show" id="newsCreate__info__setting_wrap">
                                 <div class="mb-3">
                                     <div class="row">
                                         <b class="col-4">Ngày đăng:</b>
@@ -126,12 +173,15 @@
 @endsection
 
 @push('scripts')
+
 <script>
+    
+    
+
     (function(){
         initEditor('#js--editor', '#js--editor__toolbar', "{{ route('media.upload') }}");
         $('#js--contentForm').submit(function(event){
             $(this).find('[name=content]').text( window.editor.getData() );
-            $(this).submit();
         });
         initUpload('#js--upload');
     })();

@@ -11,8 +11,8 @@ const mix = require('laravel-mix');
 |
 */
 
-mix.js('resources/js/app.js', 'public/js/admin.js')
-    .sass('resources/sass/app.scss', 'public/css/admin.css');
+// mix.js('resources/js/app.js', 'public/js/admin.js')
+//     .sass('resources/sass/app.scss', 'public/css/admin.css');
 
 mix.styles([
     'public/libs/font-awesome-4.7.0/css/font-awesome.min.css',
@@ -37,5 +37,6 @@ mix.scripts([
     'public/libs/sticky-1.0.4-4/jquery.sticky.min.js',
     'public/libs/WOW/dist/wow.min.js',
     'public/libs/jquery-validation/jquery-validation.min.js',
+    'public/libs/jquery-validation/src/additional/accept.js',
     'public/libs/toastr/build/toastr.min.js',
 ], 'public/js/app.js');

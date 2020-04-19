@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <div class="seo__preview">
+    <div class="seo__preview d-none">
         <a href="">
             <h3 data-content="metaTitle">{{$metaTitle}}</h3>
         </a>

@@ -32,6 +32,11 @@ Route::middleware(['web'])->group(function () {
                 ->where('slug', '[a-zA-Z0-9-_]+')
                 ->where('id', '[0-9]+')
                 ->name('recruit.detail');
+        
+        Route::post('/sendCV', 'RecruitController@sendCV')->name('recruit.sendCV');
+        Route::get('/presend/{id}', 'Admin\RecruitController@preViewCV')->name('recruit.preViewCV');
+        Route::post('/removeCV', 'Admin\RecruitController@removeCV')->name('recruit.removeCV');
+        
 
         Route::get('/gioi-thieu-phan-mem', 'PageController@pageSofwareIntro')->name('page.software');
 

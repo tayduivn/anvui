@@ -34,7 +34,7 @@
                             <div class="avcollapse__header" data-toggle="collapse" data-target="#newsCreate__seo__wrap">
                                 SEO
                             </div>
-                            <div class="avcollapse__body" id="newsCreate__seo__wrap">
+                            <div class="avcollapse__body collapse show" id="newsCreate__seo__wrap">
                                 @include('admin.templates.seo', ['metaTitle' => $data['seo']['meta_title'] ?? '', 'metaDesc' => $data['seo']['meta_desc'] ?? '', 'metaKeyword' => $data['seo']['meta_keyword'] ?? '',])
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                                 data-target="#newsCreate__info__setting_wrap">
                                 Thông tin
                             </div>
-                            <div class="avcollapse__body" id="newsCreate__info__setting_wrap">
+                            <div class="avcollapse__body collapse show" id="newsCreate__info__setting_wrap">
                                 <div class="mb-3">
                                     <div class="row">
                                         <b class="col-4">Ngày đăng:</b>
@@ -96,7 +96,6 @@
         initEditor('#js--editor', '#js--editor__toolbar', "{{ route('media.upload') }}");
         $('#js--contentForm').submit(function(event){
             $(this).find('[name=content]').text( window.editor.getData() );
-            $(this).submit();
         });
         initUpload('#js--upload');
     })();

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Recruit as RecruitModel;
+use App\Model\RecruitForm as RecruitFormModel;
 use App\Services\UploadService;
 
 
@@ -32,6 +33,24 @@ class RecruitController extends Controller
     }
 
 
+    public function removeCV(Request $request) {
+        $recruitFormModel = new RecruitFormModel();
+
+        try {
+
+            $recruitFormModel->where(['id' => $request->id])->delete();
+
+            $request->session()->flash('ACTION_STATUS', 'SUCCESS');
+            $request->session()->flash('ACTION_MSG', 'Xóa CV thành công !');
+
+        } catch(\Exception $e) {
+            $request->session()->flash('ACTION_STATUS', 'ERROR');
+            $request->session()->flash('ACTION_MSG', 'Có lỗi xảy ra! Vui lòng thử  lại sau.');
+        }
+        
+        return redirect()->back();
+    }
+
     public function ajaxUpdateStatus(Request $request) {
         $recruitModel = new RecruitModel();
 
@@ -56,14 +75,26 @@ class RecruitController extends Controller
 		return response()->json($res);
     }
 
+    public function preViewCV(Request $request, $id) {
+        $recruitFormModel = new RecruitFormModel();
+        
+        $recruitFormModel->where(['id' => $id])->update(['status' => 1]);
+
+        return \Redirect::intended($request->redirect_to);
+    }
+
 
     public function create(Request $request) {
         $data = [];
         $recruitModel = new RecruitModel();
+        $recruitFormModel = new RecruitFormModel();
 
+        $data['forms'] = [];
+        
         if($request->id) {
             $data = $recruitModel->getRecruits(['id' => $request->id])->firstOrFail();
             $data = $recruitModel->createContentFormatter($data, 'recruit.detail' ,'d/m/Y');
+            $data['forms'] = $recruitFormModel->getRecruitsForm(['recruit_id', $data['id']])->get();
         }
 
         return view('admin.recruit.create', ['data' => $data]); 
@@ -122,7 +153,7 @@ class RecruitController extends Controller
     public function remove(Request $request) {
         $recuitModel = new RecruitModel();
         
-        $remove = $recuitModel->removeNews($request->id);
+        $remove = $recuitModel->removeRecruit($request->id);
 
         if($remove){
             $request->session()->flash('GLOBAL_STATUS', 'SUCCESS');

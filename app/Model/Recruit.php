@@ -49,6 +49,12 @@ class Recruit extends BaseModel
     public function updateRecruit($id, $params) {
         $recruitTransModel = new RecruitTrans();
 
+        $seo = [
+            'meta_title' => $params['meta_title'],
+            'meta_desc' => $params['meta_desc'],
+            'meta_keyword' => $params['meta_keyword'],
+        ];
+
         $dataUpdate = [
             'title' => $params['title'],
             'status' => $params['status'],
@@ -59,24 +65,18 @@ class Recruit extends BaseModel
             'salary_to' => $params['salary_to'],
             'from' => $params['from'],
             'to' => $params['to'],
+            'seo' => json_encode($seo),
         ];
         
         isset($params['img']) ? $dataUpdate['img'] = $params['img'] : "";
 
         $this->where('id', $id)->update($dataUpdate);
-            
-        $seo = [
-            'meta_title' => $params['meta_title'],
-            'meta_desc' => $params['meta_desc'],
-            'meta_keyword' => $params['meta_keyword'],
-        ];
 
         $recruitTransModel->where('recruit_id', $id)->update([
             // 'title' => $params['title'],
             'content' => $params['content'],
             // 'desc' => $params['desc'],
             'lang' => $params['lang'],
-            // 'seo' => json_encode($seo),
         ]);
 
         return true;
@@ -85,6 +85,12 @@ class Recruit extends BaseModel
 
     public function insertRecruit($params) {
         $recruitTransModel = new RecruitTrans();
+
+        $seo = [
+            'meta_title' => $params['meta_title'],
+            'meta_desc' => $params['meta_desc'],
+            'meta_keyword' => $params['meta_keyword'],
+        ];
 
         $dataInsert = [
             'status' => $params['status'],
@@ -96,17 +102,12 @@ class Recruit extends BaseModel
             'salary_to' => $params['salary_to'],
             'from' => $params['from'],
             'to' => $params['to'],
+            'seo' => json_encode($seo),
         ];
 
         isset($params['img']) ? $dataInsert['img'] = $params['img'] : "";
 
         $recuitId = $this->insertGetId($dataInsert);
-
-        $seo = [
-            'meta_title' => $params['meta_title'],
-            'meta_desc' => $params['meta_desc'],
-            'meta_keyword' => $params['meta_keyword'],
-        ];
 
         if($recuitId) {
             return $recruitTransModel->insert([
@@ -114,7 +115,6 @@ class Recruit extends BaseModel
                 'content' => $params['content'],
                 // 'desc' => $params['desc'],
                 'lang' => $params['lang'],
-                // 'seo' => json_encode($seo),
             ]);
         }
         

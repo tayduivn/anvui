@@ -22,7 +22,7 @@ class NewsController extends Controller
         $newsModel = new NewsModel();
 
         $header = [
-            'meta_title' => 'Tin tức - anvui.vn',
+            'meta_title' => 'Tin tức',
         ];
 
         

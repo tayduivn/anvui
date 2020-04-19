@@ -9,8 +9,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap&subset=vietnamese">
     <link rel="stylesheet" href="{{ asset('libs/bootstrap-4.4.1/css/bootstrap.min.css') }}"> 
-    <link rel="stylesheet" href="{{ asset('css/admin.css') }}"> 
-    <link rel="stylesheet" href="{{ asset('css/admin.custom.css') }}"> 
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}?v={{ time() }}"> 
+    <link rel="stylesheet" href="{{ asset('css/admin.custom.css') }}?v={{ time() }}"> 
     <script src="{{ asset('libs/jquery-3.4.1/jquery-3.4.1.min.js') }}"></script>
 
 </head>
@@ -32,7 +32,7 @@
                 <div class="sidebar-logo">
                     <div class="peers ai-c fxw-nw">
                         <div class="peer peer-greed">
-                            <a class="sidebar-link td-n" href="/" class="td-n">
+                            <a class="sidebar-link td-n" href="{{ route("admin.index") }}" class="td-n">
                                 <div class="peers ai-c fxw-nw">
                                     <div class="peer">
                                         <div class="logo"><img src="https://colorlib.com/polygon/adminator/assets/static/images/logo.png"></div>
@@ -47,7 +47,7 @@
                 </div>
                 <ul class="sidebar-menu scrollable pos-r">
                     <li class="nav-item active">
-                        <a class="sidebar-link" href="/" default>
+                        <a class="sidebar-link" href="{{ route("admin.index") }}" default>
                             <span class="icon-holder">
                                 <i class="c-orange-500 ti-home"></i> </span><span class="title">trang chủ</span>
                         </a>
@@ -126,11 +126,17 @@
             }
         });
     </script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
     <script src="{{ asset('js/admin.vendor.js') }}?v={{ time() }}"></script>
     <script  src="{{ asset('libs/ckeditor5/build/ckeditor.js') }}"></script>
     <script src="{{ asset('js/admin.custom.js') }}?v={{ time() }}"></script>
 
     <script>
+        $(document).ready( function () {
+            $('.avdatatable').DataTable();
+        });
         toastr.options = {
             "closeButton": false,
             "debug": false,
@@ -166,7 +172,7 @@
         </script>
         @endif
     @endif
-
+        
     @stack('scripts')
     {{-- <script>
         let moduleContentBuilder = new ModuleContentBuilder({

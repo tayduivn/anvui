@@ -58,6 +58,31 @@ body,p,ul,li,label, h1, h2, h3, h4, h5, h6{
     background-color: #f1f4f6!important;
 }
 
+.dataTables_length {
+    margin-bottom: 16px;
+}
+
+.dataTables_length select {
+    background-color: #fff;
+    padding: 5px 10px;
+}
+
+.dataTables_filter { margin-bottom: 16px; }
+.dataTables_filter input {
+    padding: 5px 10px;
+    border: 1px solid #dee2e6;
+}
+.dataTable thead th{
+    border-bottom: 2px solid #dee2e6!important;
+}
+table.dataTable.no-footer {
+    border-bottom: 1px solid #dee2e6!important;
+}
+
+.listCV tbody tr.viewed {
+    background-color: rgba(0,0,0,.05);
+}
+
 #mainContent {
     padding: 24px;
     background-color: #f1f4f6;

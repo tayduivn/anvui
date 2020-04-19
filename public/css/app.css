@@ -3922,6 +3922,7 @@ ul, p, label, h1,h2,h3,h4,h5,h6 { margin: 0; }
     font-weight: bold!important;
     font-size: 12.5px!important;
     color: #dc3333!important;
+    height: unset!important;
 }
 .agreement_check-error {
     display: none;
@@ -5127,6 +5128,19 @@ ul, p, label, h1,h2,h3,h4,h5,h6 { margin: 0; }
 .recruit-details__content img{
     max-width: 100%!important;
     height: auto!important;
+}
+.modal--cv--reg_form {
+    padding: 24px;
+}
+.btn-send-cv {
+    background: #C4DBFE;
+    border-radius: 8px;
+    border: none;
+    font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 28px;
+color: #5C9CFE!important;
 }
 .modal--cv--reg__title {
     font-style: normal;

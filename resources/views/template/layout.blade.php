@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!-- ================= Favicon ================== -->
     <!-- Standard -->
-    <link rel="shortcut icon" href="favicon.png?v=1">
+    <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
     <!-- Retina iPad Touch Icon-->
     <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('favicon.png') }}">
     <!-- Retina iPhone Touch Icon-->
@@ -35,7 +35,7 @@
     <meta name=twitter:creator content="">
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap&subset=vietnamese">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}?v=1.0.2">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}?v=1.0.3">
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}?v={{ time() }}">
 </head>
 <body>
@@ -50,7 +50,7 @@
                 <li class="pushy-link"><a href="{{ route('intro.index') }}" title="">Giới thiệu</a></li>
                 <li class="pushy-link"><a href="{{ route('page.software') }}" title="">Phần mềm nhà xe</a></li>
                 <li class="pushy-link"><a href="{{ route('news.index') }}" title="">Tin tức</a></li>
-                {{-- <li class="pushy-link"><a href="{{ route('recruit.index') }}" title="">Tuyển dụng</a></li> --}}
+                <li class="pushy-link"><a href="{{ route('recruit.index') }}" title="">Tuyển dụng</a></li>
             </ul>
         </div>
     </nav>
@@ -65,7 +65,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="avnavbar">
                             <ul class="avnavbar__left">
-                                <li class="avnavbar__logo"><a href="" title="">
+                                <li class="avnavbar__logo"><a href="{{ route('home.index') }}" title="">
                                     <div class="icon-logo_w"></div>    
                                 </a></li>
                             </ul>
@@ -74,7 +74,7 @@
                                 <li><a href="{{ route('intro.index') }}">Giới thiệu</a></li>
                                 <li><a href="{{ route('page.software') }}">Phần mềm nhà xe</a></li>
                                 <li><a href="{{ route('news.index') }}">Tin tức</a></li>
-                                {{-- <li><a href="{{ route('recruit.index') }}">Tuyển dụng</a></li> --}}
+                                <li><a href="{{ route('recruit.index') }}">Tuyển dụng</a></li>
                                 <li class="language">
                                     @if( str_replace('_', '-', app()->getLocale()) == 'vi' )
                                     <a href="javascript:;"> <span class="avicon icon-vn"></span> Tiếng việt</a>
@@ -138,7 +138,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="navbar--white__wrap">
                             <div class="navbar--white__left">
-                                <a href="" title="" class="navbar--white__logo">
+                                <a href="{{ route('home.index') }}" title="" class="navbar--white__logo">
                                     <img src="{{ asset('imgs/logo_b.png') }}" title="" alt="">
                                 </a>
                             </div>
@@ -148,7 +148,7 @@
                                     <li><a href="{{ route('intro.index') }}" title="">Giới thiệu</a></li>
                                     <li><a href="{{ route('page.software') }}" title="">Phần mềm nhà xe</a></li>
                                     <li><a href="{{ route('news.index') }}" title="">Tin tức</a></li>
-                                    {{-- <li><a href="{{ route('recruit.index') }}" title="">Tuyển dụng</a></li> --}}
+                                    <li><a href="{{ route('recruit.index') }}" title="">Tuyển dụng</a></li>
                                     <li><a class="btn--reg" data-toggle="modal" data-target="#modal--register">DÙNG THỬ MIỄN PHÍ</a></li>
                                 </ul>
                             </div>
@@ -259,75 +259,7 @@
             <span>COPYRIGHT BY  <a href="">ANVUI</a> - 2020</span>
         </div>
     </footer>
-    <div class="modal modal--cv--reg" id="modal__cv--reg">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="modal--cv--reg_form">
-                            <form action="{{ route('register_use.store') }}" method="POST" id="js-form--reg_cv" enctype="multipart/form-data">
-                                @csrf
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                            <label for="">Họ tên: <span class="text-danger">*</span></label>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                            <input type="text" name="name" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                            <label for="">Email: <span class="text-danger">*</span></label>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                            <input type="text" name="email" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                            <label for="">Số điện thoại: <span class="text-danger">*</span></label>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                            <input type="number" name="phone" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                            <label for="">CV của bạn: <span class="text-danger">*</span></label>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                            {{-- <label for="js--cvfile" type="button" class="btn d-inline-block btn-send-cv">
-                                                Chọn file
-                                            </label> --}}
-                                            <input type="file" id="js--cvfile" name="cv" class="form-control">
-                                            <label for="cv" id="cv-error" class="error"></label>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
 
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
-                                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                            <button class="btn--reg" type="submit">Gửi thông tin </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="modal modal--register" id="modal--register">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -427,7 +359,7 @@
         </div>
     </div>
 
-    <script src="{{ asset('js/app.js') }}?v=1.0.0"></script>
+    <script src="{{ asset('js/app.js') }}?v=1.0.3"></script>
     
     @if( session('ACTION_STATUS') != null )
         @if (session('ACTION_STATUS') == 'SUCCESS')
@@ -528,7 +460,8 @@
             rules: {
                 cv: {
                     required: true,
-                    extension: "pdf"
+                    accept:"application/pdf",
+                    filesize : 2048,
                 },
                 name: {
                     required: true,
@@ -541,7 +474,8 @@
                 },
                 phone: {
                     required: true,
-                    number: true
+                    number: true,
+                    maxlength:15,
                 },
                 
             },
@@ -562,7 +496,8 @@
                 },
                 cv: {
                     required: "CV không được bỏ trống !",
-                    extension: "Chỉ cho phép file pdf !"
+                    extension: "Chỉ cho phép file pdf !",
+                    filesize: "File upload tối đa 2MB",
                 }
             },
             // submitHandler: function(form) {

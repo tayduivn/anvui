@@ -26,6 +26,7 @@ Number.prototype.formatnum = function(n, x) {
 })();
 
 
+
 function initUpload(uploadSlector, wrap = "") {
     function readURL(input) {
         var result = "";

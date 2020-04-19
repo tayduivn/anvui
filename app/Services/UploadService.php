@@ -41,23 +41,8 @@ class UploadService
     public function uploadFromFile($data) {
         if( !isset($data['path']) ) {
             $path = date("Y") . '/' . date('m') . '/' . date('d') . '/' . time() . "_" . $data['name'];
-            $pathDir = date("Y") . '/' . date('m') . '/' . date('d');
         } else {
-                $path = $data['path'] . "/"  . time() . "_" . $data['name'];
-                $pathDir = $data['path'];
-        }
-
-        if( env('APP_ENV') != 'local' ) {
-            $path = time() . "_" . $data['name'];
-            $pathDir = "";
-        }
-        
-        if( env('APP_ENV') != 'local' ) {
-            try {
-                mkdir(public_path() . '/upload/' . $pathDir, 0777, true);
-            } catch(\Exception $e) {
-
-            }
+            $path = $data['path'] . "/"  . time() . "_" . $data['name'];
         }
         
         if( Storage::disk('public_uploads')->put($path, file_get_contents($data['realPath'])) ) {
