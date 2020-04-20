@@ -20,7 +20,7 @@
     <meta name="keyword" content="{{ $HEADER['metaKeyword'] }}"/>
 
     <meta name="author" content="namdoanquoc.1998@gmail.com">
-    <meta property="og:image" content="{{ asset('imgs/img-home2.png') }}">
+    <meta property="og:image" content="{{ $HEADER['img'] }}">
     <meta property="og:title" content="{{ $HEADER['metaTitle'] }}">
     <meta property="og:description" content="{{ $HEADER['metaDesc'] }}">
     <meta property="og:image:type" content="">
@@ -31,7 +31,7 @@
     <meta name=twitter:description content="{{ $HEADER['metaDesc'] }}">
     <meta name=twitter:title content="{{ $HEADER['metaTitle'] }}">
     <meta name=twitter:site content="">
-    <meta name=twitter:image content="">
+    <meta name=twitter:image content="{{ $HEADER['img'] }}">
     <meta name=twitter:creator content="">
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap&subset=vietnamese">
