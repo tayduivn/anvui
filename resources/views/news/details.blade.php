@@ -31,6 +31,12 @@
         </div>
     </div>
 </section>
+<style>
+    .news-details__content img {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
 
 
 @endsection

@@ -16,7 +16,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
                     <h2 class="news-item__title"><a href="{{ $value->link }}" title="{{ $value['title'] }}">{{ $value['title'] }}</a></h2>
                     <div class="news-item__desc">
-                        {{ $value['desc'] }}
+                        {{ !empty($value['desc']) ? $value['desc'] : $value['seo']['meta_desc'] }}
                     </div>
                     <p class="news-item__date">Ngày đăng: {{ $value['created_at_format'] }}</p>
                 </div>    
