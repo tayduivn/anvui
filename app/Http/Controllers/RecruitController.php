@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Model\Recruit as RecruitModel;
 use App\Model\RecruitForm as RecruitFormModel;
 use App\Services\UploadService;
+use Illuminate\Support\Facades\Log;
 
 class RecruitController extends Controller
 {
@@ -72,6 +73,8 @@ class RecruitController extends Controller
             'cv' => 'required|mimetypes:application/pdf|max:2048',
         ]);
 
+        Log::info( json_encode($request->all()));
+
         $params = [
             'recruit_id' => $request->recruit_id,
             'name' => $request->name,
@@ -87,6 +90,7 @@ class RecruitController extends Controller
             'realPath' => $request->cv->getRealPath()
         ];
         $cv = $uploadService->uploadFromFile($dataUpload);
+        Log::info( json_encode($cv) );
         if($cv) {
             $params['file'] = $cv;
         } else {
@@ -97,6 +101,8 @@ class RecruitController extends Controller
         
         $recruitFormModel = new RecruitFormModel();
 
+        Log::info( json_encode($params) );
+
         try {
 
             $recruitFormModel->insert($params);
@@ -106,6 +112,8 @@ class RecruitController extends Controller
             return redirect()->back();
 
         } catch(\Exception $e) {
+            Log::error( json_encode($e->getMessage() ) );
+
             $request->session()->flash('ACTION_STATUS', 'ERROR');
             $request->session()->flash('ACTION_MSG', 'Có lỗi xảy ra! Vui lòng thử  lại sau.');
             return redirect()->back();
