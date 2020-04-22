@@ -19,7 +19,6 @@ class ApiController extends Controller
 		$start = ($page - 1)*$limit;
         
         $listNews = $newsModel->getNewses(['status' => 1])->orderBy('created_at', 'DESC')->offset($start)->limit($limit)->get();
-        dd($listNews);
         $res = [];
 
         foreach ($listNews as $key => $value) {
