@@ -8,6 +8,11 @@ use App\Model\News as NewsModel;
 class ApiController extends Controller
 {
     public function getNews(Request $request) {
+        header('X-XSS-Protection: 0');
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Methods: POST, GET');
+        header('Access-Control-Max-Age: 1000');
+
         $newsModel = new NewsModel();
         $page = $request->p ?? 1;
         $limit = $request->limit ?? 5;

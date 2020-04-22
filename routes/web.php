@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/apinews', 'ApiController@getNews')->name('api.news.get');
 
 Route::middleware(['web'])->group(function () {
         Route::get('/', 'HomeController@index')->name('home.index');
@@ -42,7 +43,7 @@ Route::middleware(['web'])->group(function () {
 
         Route::post('/register_use', 'RegisterUseController@store')->name('register_use.store');
 
-        Route::get('/apinews', 'ApiController@getNews')->name('api.news.get');
+        
         Route::get('/admin/login', 'Admin\LoginController@index')->name('admin.login.index');
         Route::post('/admin/login', 'Admin\LoginController@login')->name('admin.login');
         
