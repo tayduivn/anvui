@@ -19,13 +19,15 @@ class ApiController extends Controller
 		$start = ($page - 1)*$limit;
         
         $listNews = $newsModel->getNewses(['status' => 1])->orderBy('created_at', 'DESC')->offset($start)->limit($limit)->get();
-
+        dd($listNews);
         $res = [];
 
         foreach ($listNews as $key => $value) {
+            $seo = json_decode($value['seo'], true);
+
             $res[$key]['img'] = asset($value['img']);
 			$res[$key]['title'] = $value['title'];
-			$res[$key]['meta_description'] = !empty($res[$key]['meta_description']) ? $res[$key]['meta_description'] : $value['desc'];
+			$res[$key]['meta_description'] = !empty($seo['meta_desc']) ? $seo['meta_desc'] : $value['desc'];
 			$res[$key]['time'] = $value['created_at']->format('d/m/Y');
 			$res[$key]['link'] = route('news.detail.old', [ 'slug' => str_slug($value['title'], "-"), 'id' => $value['id'] ]);
         }
