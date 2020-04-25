@@ -11,6 +11,9 @@
 |
 */
 Route::get('/apinews', 'ApiController@getNews')->name('api.news.get');
+Route::get('/pointNX', 'ApiController@pointNX')->name('api.pointNX');
+Route::get('/listSchedule3', 'ApiController@listSchedule3')->name('api.listSchedule3');
+
 
 Route::middleware(['web'])->group(function () {
         Route::get('/', 'HomeController@index')->name('home.index');
