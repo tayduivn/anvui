@@ -160,7 +160,10 @@ class ApiController extends Controller
 
 
     function listSchedule3(){
-        
+        header('X-XSS-Protection: 0');
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Methods: POST, GET');
+        header('Access-Control-Max-Age: 1000');
 
         $url = 'https://ticket-new-dot-dobody-anvui.appspot.com/planfortrip/searchForCustomer';
 
@@ -227,7 +230,10 @@ class ApiController extends Controller
 
 
 	function pointNX(){
-
+        header('X-XSS-Protection: 0');
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Methods: POST, GET');
+        header('Access-Control-Max-Age: 1000');
 		$routeId = $_POST['routeId'];
 
 		$beginOfDay = strtotime("midnight"); 
