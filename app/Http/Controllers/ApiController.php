@@ -234,8 +234,8 @@ class ApiController extends Controller
         header('Access-Control-Allow-Origin: *');
         header('Access-Control-Allow-Methods: POST, GET');
         header('Access-Control-Max-Age: 1000');
+        
 		$routeId = $_POST['routeId'];
-
 		$beginOfDay = strtotime("midnight"); 
 		$endOfDay   = strtotime("tomorrow", $beginOfDay) - 1;
 		$res= $this->GetAnvui('https://ticket-dot-anvui.appspot.com/web/route-view-by-id?page=0&count=10&routeId='.$routeId.'&startDate='.$beginOfDay.'&endDate='.$endOfDay);
