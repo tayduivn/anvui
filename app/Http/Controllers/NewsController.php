@@ -61,7 +61,7 @@ class NewsController extends Controller
         $header = [
             'meta_title' => empty($data['seo']['meta_title']) ? $data['title'] : $data['seo']['meta_title'],
             'meta_keyword' => $data['seo']['meta_keyword'],
-            'meta_description' => $data['seo']['meta_desc'],
+            'meta_desc' => $data['seo']['meta_desc'],
             'img' => $data['img'],
         ];
         
