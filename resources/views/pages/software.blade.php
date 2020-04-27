@@ -48,7 +48,7 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    <img src="{{asset('imgs/software-img.png')}}" class="img-fluid" alt="" title="">
+                                    <img src="{{asset('imgs/software-img.png')}}" class="img-fluid" alt="{{ $HEADER['metaTitle'] }}" title="{{ $HEADER['metaTitle'] }}">
                                 </div>
                             </div>
                         </div>
@@ -62,7 +62,7 @@
                         <div class="software-page__para__quote">
                             <div class="row">
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    <img src="{{asset('imgs/software-img1.png')}}" class="img-fluid" alt="" title="">
+                                    <img src="{{asset('imgs/software-img1.png')}}" class="img-fluid" alt="{{ $HEADER['metaTitle'] }}" title="{{ $HEADER['metaTitle'] }}">
                                 </div>
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                     <div class="software-page__para__quote_text">
@@ -97,28 +97,28 @@
                     <h3 class="software-page__title">CÁC BƯỚC ĐẶT VÉ TRỰC TUYẾN</h3>
                     <div class="software-page__para__icons">
                         <div>
-                            <div class="software-page__para__icons__img"><img src="{{ asset('imgs/icon/icon7.png') }}" class="img-fluid" title="" alt=""></div>
+                            <div class="software-page__para__icons__img"><img src="{{ asset('imgs/icon/icon7.png') }}" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}"></div>
                             <p>Tải app</p>
                         </div>
                         <div>
-                            <div class="software-page__para__icons__img"><img src="{{ asset('imgs/icon/icon8.png') }}" class="img-fluid" title="" alt=""></div>
+                            <div class="software-page__para__icons__img"><img src="{{ asset('imgs/icon/icon8.png') }}" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}"></div>
                             <p>Đặt vé</p>
                         </div>
                         <div>
-                            <div class="software-page__para__icons__img"><img src="{{ asset('imgs/icon/icon9.png') }}" class="img-fluid" title="" alt=""></div>
+                            <div class="software-page__para__icons__img"><img src="{{ asset('imgs/icon/icon9.png') }}" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}"></div>
                             <p>Thanh toán</p>
                         </div>
                         <div>
-                            <div class="software-page__para__icons__img"><img src="{{ asset('imgs/icon/icon10.png') }}" class="img-fluid" title="" alt=""></div>
+                            <div class="software-page__para__icons__img"><img src="{{ asset('imgs/icon/icon10.png') }}" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}"></div>
                             <p>Nhận mã vé</p>
                         </div>
                         <div>
-                            <div class="software-page__para__icons__img"><img src="{{ asset('imgs/icon/icon11.png') }}" class="img-fluid" title="" alt=""></div>
+                            <div class="software-page__para__icons__img"><img src="{{ asset('imgs/icon/icon11.png') }}" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}"></div>
                             <p>Lên xe</p>
                         </div>
                     </div>
                     <div class="software-page__para">
-                        <p>Để biết thông tin chi tiết về phần mềm quản lý bán vé xe khách quý vị có thể  <a href="" title="">Download thông tin giới thiệu về phần mềm</a></p>
+                        <p>Để biết thông tin chi tiết về phần mềm quản lý bán vé xe khách quý vị có thể  <a href="/" title="{{ $HEADER['metaTitle'] }}">Download thông tin giới thiệu về phần mềm</a></p>
                     </div>
                 </div>
             </div>

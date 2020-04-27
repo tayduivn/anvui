@@ -22,7 +22,7 @@
                     <p>Chúng tôi tự hào là đơn vị được Cộng đồng phát triển công nghệ Google trao giải nhất Đột phá sáng tạo năm 2015. ANVUI lọt TOP 17 Startup tiêu biểu của Việt Nam do báo vnexpress tổ chức năm 2016 AN VUI là doanh nghiệp Công nghệ vinh dự đã vượt qua 289 dự án lọt vào TOP 10 của Nhân Tài Đất Việt 2017. AN VUI luôn sẵn sàng là một đơn vị cung cấp giải pháp tổng thể giúp các nhà vận tải quản lý và điều hành hiệu quả hơn. Với mục tiêu mỗi chuyến đi an ngàn trái tim vui, để mỗi chuyến đi đều an toàn và vui vẻ.</p>
                     <h3 class="js_tock__mock">Lợi ích của An Vui</h3>
                     <h3 class="intro-page__title">Lợi ích của việc sử  dụng dịch vụ An Vui</h3>
-                    <img src="imgs/intro1.png" class="img-fluid" title="" alt="">
+                    <img src="imgs/intro1.png" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
                     <h4 class="intro-page__sub">Các dịch vụ sản phẩm mà AN VUI cung cấp gồm</h4>
                     <p>- Phần mềm quản lý và điều hành bán vé thông minh </p>
                     <p>- Hệ thống website bán vé trực tuyến cho nhà xe </p>
@@ -43,9 +43,9 @@
                     <p>- Cung cấp đầy đủ hệ thống báo cáo và thống kê: nhật ký chạy xe, báo cáo doanh số bán vé, hệ thống báo cáo quản trị cho nhà xe…</p>
                     <h3 class="js_tock__mock">Đăng ký sử dụng</h3>
                     <h3 class="intro-page__title">Lợi ích mang lại cho khách hàng</h3>
-                    <img src="imgs/intro2.png" class="img-fluid" title="" alt="">
+                    <img src="imgs/intro2.png" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
                     <p>Khi cần được trợ giúp xin gọi 1900 1911. Chúng tôi hân hạnh được phục vụ quý khách!</p>
-                    <p>Nếu bạn là nhà xe muốn đăng ký dùng thử Phần mềm quản lý điều hành bán vé thông minh của AN VUI thì bạn có thể đăng ký tại đây.</p>
+                    <p>Nếu bạn là nhà xe muốn đăng ký dùng thử Phần mềm quản lý điều hành bán vé thông minh của AN VUI thì bạn có thể đăng ký để được tư vấn <a href="#modal--register"  data-toggle="modal">tại đây.</a></p>
                 </div>
             </div>
         </div>

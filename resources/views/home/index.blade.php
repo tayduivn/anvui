@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col--hidden-ipad">
                 <div class="whyneed__img">
-                    <img src="{{ asset('imgs/img-home1.png') }}" alt="" title="" class="img-fluid">
+                    <img src="{{ asset('imgs/img-home1.png') }}" alt="{{ $HEADER['metaTitle'] }}" title="{{ $HEADER['metaTitle'] }}" class="img-fluid">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col--12-ipad">
@@ -39,12 +39,12 @@
                 <div class="whychose__content wow slideInLeft" data-wow-duration=".3s">
                     <p>Cuộc cách mạng công nghiệp lần thứ 4 (cách mạng công nghiệp 4.0) đang ảnh hưởng, tác động sâu sắc đến quốc gia, mỗi ngành, lĩnh vực, doanh nghiệp và người dân. Vì vậy, ngành GTVT cũng không nằm ngoài ảnh hưởng này.</p>
                     <p>Giờ đây không còn doanh nghiệp to thắng doanh nghiệp nhỏ mà là doanh nghiệp nhanh thắng doanh nghiệp chậm. Nếu thiếu tiền thì có thể đi vay, thiếu xe thì có thể đi thuê nhưng thiếu hành khách là thiếu tất cả. Chính vì thế việc ứng dụng công nghệ vào quản lý điều hành giúp doanh nghiệp vận tải tăng doanh thu, tiết kiệm chi phí và nâng cao năng lực cạnh tranh trong thời đại mới. Chúng tôi giúp bạn thực hiện điều đó!</p>
-                    <a href="" class="btn--reg">DÙNG THỬ MIỄN PHÍ</a>
+                    <a href="" class="btn--reg">ĐĂNG KÝ TƯ VẤN</a>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col--hidden-ipad">
                 <div class="whychose__img">
-                    <img src="{{ asset('imgs/img-home2.png') }}" class="img-fluid" title="" alt="">
+                    <img src="{{ asset('imgs/img-home2.png') }}" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
                 </div>   
             </div>
         </div>
@@ -57,7 +57,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col--hidden-ipad">
                 <div class="avecosystem__img">
-                    <img src="{{ asset('imgs/img-home3.png') }}" class="img-fluid" title="" alt="">
+                    <img src="{{ asset('imgs/img-home3.png') }}" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
                 </div> 
             </div>
             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col--12-ipad">
@@ -118,22 +118,22 @@
                 <div id="js_custommer__carousel" class="custommer__carousel owl-carousel owl-theme">
                     <div class="item">
                         <a href="">
-                            <img src="{{ asset('imgs/custommer/futa.png') }}" class="img-fluid" title="" alt="">
+                            <img src="{{ asset('imgs/custommer/futa.png') }}" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
                         </a>
                     </div>
                     <div class="item">
                         <a href="">
-                            <img src="{{ asset('imgs/custommer/trungthanh.png') }}" class="img-fluid" title="" alt="">
+                            <img src="{{ asset('imgs/custommer/trungthanh.png') }}" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
                         </a>
                     </div>
                     <div class="item">
                         <a href="">
-                            <img src="{{ asset('imgs/custommer/inter.png') }}" class="img-fluid" title="" alt="">
+                            <img src="{{ asset('imgs/custommer/inter.png') }}" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
                         </a>
                     </div>
                     <div class="item">
                         <a href="">
-                            <img src="{{ asset('imgs/custommer/vulinh.png') }}" class="img-fluid" title="" alt="">
+                            <img src="{{ asset('imgs/custommer/vulinh.png') }}" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
                         </a>
                     </div>
                 </div>

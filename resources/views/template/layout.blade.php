@@ -46,11 +46,11 @@
         <div class="pushy-content">
             <ul>
                 <!-- Submenu -->
-                <li class="pushy-link"><a href="{{ route('home.index') }}" title="">Trang chủ</a></li>
-                <li class="pushy-link"><a href="{{ route('intro.index') }}" title="">Giới thiệu</a></li>
-                <li class="pushy-link"><a href="{{ route('page.software') }}" title="">Phần mềm nhà xe</a></li>
-                <li class="pushy-link"><a href="{{ route('news.index') }}" title="">Tin tức</a></li>
-                <li class="pushy-link"><a href="{{ route('recruit.index') }}" title="">Tuyển dụng</a></li>
+                <li class="pushy-link"><a href="{{ route('home.index') }}" title="{{ $HEADER['metaTitle'] }}">Trang chủ</a></li>
+                <li class="pushy-link"><a href="{{ route('intro.index') }}" title="{{ $HEADER['metaTitle'] }}">Giới thiệu</a></li>
+                <li class="pushy-link"><a href="{{ route('page.software') }}" title="{{ $HEADER['metaTitle'] }}">Phần mềm nhà xe</a></li>
+                <li class="pushy-link"><a href="{{ route('news.index') }}" title="{{ $HEADER['metaTitle'] }}">Tin tức</a></li>
+                <li class="pushy-link"><a href="{{ route('recruit.index') }}" title="{{ $HEADER['metaTitle'] }}">Tuyển dụng</a></li>
             </ul>
         </div>
     </nav>
@@ -65,7 +65,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="avnavbar">
                             <ul class="avnavbar__left">
-                                <li class="avnavbar__logo"><a href="{{ route('home.index') }}" title="">
+                                <li class="avnavbar__logo"><a href="{{ route('home.index') }}" title="{{ $HEADER['metaTitle'] }}">
                                     <div class="icon-logo_w"></div>    
                                 </a></li>
                             </ul>
@@ -82,8 +82,8 @@
                                     <a href="javascript:;"> <span class="avicon icon-us"></span> English</a>
                                     @endif
                                     <ul class="avnavbar__dropdown">
-                                        <li class="d-none"><a href="{{ route('lang','en') }}" title=""><span class="avicon icon-us"></span> English</a></li>
-                                        <li><a href="{{ route('lang','vi') }}" title=""><span class="avicon icon-vn"></span> Tiếng Việt</a></li>
+                                        <li class="d-none"><a href="{{ route('lang','en') }}" title="{{ $HEADER['metaTitle'] }}"><span class="avicon icon-us"></span> English</a></li>
+                                        <li><a href="{{ route('lang','vi') }}" title="{{ $HEADER['metaTitle'] }}"><span class="avicon icon-vn"></span> Tiếng Việt</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -97,7 +97,7 @@
                 <div class="avnavbar--mobile__wrap">
                     <ul class="avnavbar--mobile__left">
                         <li>
-                            <a href="{{ route('home.index') }}" title="" class="avnavbar--mobile__logo">                                    
+                            <a href="{{ route('home.index') }}" title="{{ $HEADER['metaTitle'] }}" class="avnavbar--mobile__logo">                                    
                                 <div class="icon-logo_w"></div>    
                             </a>
                         </li>
@@ -118,12 +118,12 @@
                         <div class="banner__content wow slideInLeft" data-wow-duration=".5s">
                             <h1>Nền tảng số hoá ngành vận tải hành khách đường dài.</h1>
                             <p>AN VUI là  Doanh nghiệp đầu tiên tại Việt Nam cung cấp nền tảng công nghệ số hoá ngành vận tải hành khách đường dài. Giúp các nhà vận tải hành khách chuyển đổi số, chủ động quản trị khoa học, nâng cao năng lực cạnh tranh từ đó giữ vững thị phần và mở rộng quy mô.</p>
-                            <a href="javascript:;" data-toggle="modal" data-target="#modal--register" class="btn--reg">DÙNG THỬ MIỄN PHÍ</a>
+                            <a href="javascript:;" data-toggle="modal" data-target="#modal--register" class="btn--reg">ĐĂNG KÝ TƯ VẤN</a>
                         </div>    
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col--hidden-ipad">
                         <div class="banner__img">
-                            <img src="{{ asset('imgs/img-banner.png') }}" class="img-fluid" title="" alt="">
+                            <img src="{{ asset('imgs/img-banner.png') }}" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
                         </div>    
                     </div>
                 </div>
@@ -138,18 +138,18 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="navbar--white__wrap">
                             <div class="navbar--white__left">
-                                <a href="{{ route('home.index') }}" title="" class="navbar--white__logo">
-                                    <img src="{{ asset('imgs/logo_b.png') }}" title="" alt="">
+                                <a href="{{ route('home.index') }}" title="{{ $HEADER['metaTitle'] }}" class="navbar--white__logo">
+                                    <img src="{{ asset('imgs/logo_b.png') }}" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
                                 </a>
                             </div>
                             <div class="navbar--white__right">
                                 <ul>
-                                    <li><a href="{{ route('home.index') }}" title="">Trang chủ</a></li>
-                                    <li><a href="{{ route('intro.index') }}" title="">Giới thiệu</a></li>
-                                    <li><a href="{{ route('page.software') }}" title="">Phần mềm nhà xe</a></li>
-                                    <li><a href="{{ route('news.index') }}" title="">Tin tức</a></li>
-                                    <li><a href="{{ route('recruit.index') }}" title="">Tuyển dụng</a></li>
-                                    <li><a class="btn--reg" data-toggle="modal" data-target="#modal--register">DÙNG THỬ MIỄN PHÍ</a></li>
+                                    <li><a href="{{ route('home.index') }}" title="{{ $HEADER['metaTitle'] }}">Trang chủ</a></li>
+                                    <li><a href="{{ route('intro.index') }}" title="{{ $HEADER['metaTitle'] }}">Giới thiệu</a></li>
+                                    <li><a href="{{ route('page.software') }}" title="{{ $HEADER['metaTitle'] }}">Phần mềm nhà xe</a></li>
+                                    <li><a href="{{ route('news.index') }}" title="{{ $HEADER['metaTitle'] }}">Tin tức</a></li>
+                                    <li><a href="{{ route('recruit.index') }}" title="{{ $HEADER['metaTitle'] }}">Tuyển dụng</a></li>
+                                    <li><a class="btn--reg" data-toggle="modal" data-target="#modal--register">ĐĂNG KÝ TƯ VẤN</a></li>
                                 </ul>
                             </div>
                         </div> 
@@ -162,7 +162,7 @@
                 <div class="avnavbar--mobile__wrap">
                     <ul class="avnavbar--mobile__left">
                         <li>
-                            <a href="{{ route('home.index') }}" title="" class="avnavbar--mobile__logo">                                    
+                            <a href="{{ route('home.index') }}" title="{{ $HEADER['metaTitle'] }}" class="avnavbar--mobile__logo">                                    
                                 <div class="icon-logo_b"></div>    
                             </a>
                         </li>
@@ -185,7 +185,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6  col--12-ipad">
                         <div class="footer__logo">
-                            <a href="" title="">
+                            <a href="{{ route('home.index') }}" title="{{ $HEADER['metaTitle'] }}">
                                 <div class="icon-logo_b"></div>    
                             </a>
                         </div>
@@ -207,14 +207,14 @@
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6  col--12-ipad">
                         <div class="footer__menu">
-                            <a href="" title="">Chính sách bảo mật</a>
-                            <a href="" title="">Chính sách hoạt động</a>
-                            <a href="" title="">Điều khoản sử dụng</a>
+                            <a href="" title="{{ $HEADER['metaTitle'] }}">Chính sách bảo mật</a>
+                            <a href="" title="{{ $HEADER['metaTitle'] }}">Chính sách hoạt động</a>
+                            <a href="" title="{{ $HEADER['metaTitle'] }}">Điều khoản sử dụng</a>
                         </div>
                         <div class="footer__app">
                             <span>Tải ứng dụng</span>
-                            <a href="" title=""><img src="{{ asset('imgs/appst.png') }}" alt="" title=""></a>
-                            <a href="" title=""><img src="{{ asset('imgs/ggplay.png') }}" alt="" title=""></a>
+                            <a href="" title="{{ $HEADER['metaTitle'] }}"><img src="{{ asset('imgs/appst.png') }}" alt="{{ $HEADER['metaTitle'] }}" title="{{ $HEADER['metaTitle'] }}"></a>
+                            <a href="" title="{{ $HEADER['metaTitle'] }}"><img src="{{ asset('imgs/ggplay.png') }}" alt="{{ $HEADER['metaTitle'] }}" title="{{ $HEADER['metaTitle'] }}"></a>
                         </div>
                     </div>
                 </div>
@@ -226,31 +226,31 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col--12-ipad">
                         <div class="partner">
-                            <a href="" title=""><i class="d-inline-block icon-pn1"></i></a>
-                            <a href="" title=""><i class="d-inline-block icon-pn2"></i></a>
-                            <a href="" title=""><i class="d-inline-block icon-pn3"></i></a>
+                            <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn1"></i></a>
+                            <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn2"></i></a>
+                            <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn3"></i></a>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col--12-ipad">
                         <div class="partner partner--right">
-                            <a href="" title=""><i class="d-inline-block icon-pn4"></i></a>
-                            <a href="" title=""><i class="d-inline-block icon-pn5"></i></a>
-                            <a href="" title=""><i class="d-inline-block icon-pn6"></i></a>
+                            <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn4"></i></a>
+                            <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn5"></i></a>
+                            <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn6"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="partner--mobile__wrap">
                     <div class="partner--mobile">
-                        <a href="" title=""><i class="d-inline-block icon-pn1"></i></a>
-                        <a href="" title=""><i class="d-inline-block icon-pn2"></i></a>
+                        <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn1"></i></a>
+                        <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn2"></i></a>
                     </div>
                     <div class="partner--mobile">
-                        <a href="" title=""><i class="d-inline-block icon-pn3"></i></a>
-                        <a href="" title=""><i class="d-inline-block icon-pn4"></i></a>
+                        <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn3"></i></a>
+                        <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn4"></i></a>
                     </div>
                     <div class="partner--mobile">
-                        <a href="" title=""><i class="d-inline-block icon-pn5"></i></a>
-                        <a href="" title=""><i class="d-inline-block icon-pn6"></i></a>
+                        <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn5"></i></a>
+                        <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn6"></i></a>
                     </div>
                 </div>
             </div>
@@ -266,7 +266,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                         <div class="modal--register__img">
-                            <img src="{{ asset('imgs/img-reg.png') }}" title="" alt="">
+                            <img src="{{ asset('imgs/img-reg.png') }}" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
                             <div class="modal--register__content">
                                 <p>Nền tảng quản lý</p>
                                 <h1>Tối ưu</h1>
@@ -281,7 +281,7 @@
                             <form action="{{ route('register_use.store') }}" method="POST" id="js-form--register">
                                 @csrf
                                 <h3 class="modal--register__form__header">
-                                    Đăng ký dùng thử
+                                    Đăng ký tư vấn
                                 </h3>
                                 <div class="form-group">
                                     <div class="row">
@@ -289,7 +289,7 @@
                                             <label for="">Họ tên người liên hệ </label>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                            <input type="text" name="user_name" class="form-control">
+                                            <input type="text" name="user_name" required class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -299,7 +299,7 @@
                                             <label for="">Tên nhà xe </label>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                            <input type="text" name="company_name" class="form-control">
+                                            <input type="text" name="company_name" required class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -309,7 +309,7 @@
                                             <label for="">Số điện thoại </label>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                            <input type="number" name="phone" class="form-control">
+                                            <input type="number" name="phone" required class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -330,19 +330,19 @@
 
                                         </div>
                                 </div>
-                                <div class="form-group">
+                                {{-- <div class="form-group">
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
                                         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                                             <div class="input-style">
                                                 <input type="checkbox" name="agreement_check" id="contract-check">
-                                                <label for="contract-check">Tôi đã đọc và đồng ý với <a href="" title="">Điều khoản của An Vui</a></label>
+                                                <label for="contract-check">Tôi đã đọc và đồng ý với <a href="" title="{{ $HEADER['metaTitle'] }}">Điều khoản của An Vui</a></label>
                                             </div>
                                             <div class="agreement_check-error">
                                                 <label for="agreement_check" class="error" ></label>
                                             </div>
                                         </div>
-                                </div>
+                                </div> --}}
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
@@ -429,9 +429,9 @@
                 address: {
                     minlength: 5
                 },
-                agreement_check: {
-                    required: true,
-                }
+                // agreement_check: {
+                //     required: true,
+                // }
             },
 
             messages: {
