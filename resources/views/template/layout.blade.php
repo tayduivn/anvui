@@ -226,9 +226,15 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col--12-ipad">
                         <div class="partner">
-                            <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn1"></i></a>
-                            <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn2"></i></a>
-                            <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn3"></i></a>
+                            <a href="https://vnpay.vn/" target="_BLANK" title="{{ $HEADER['metaTitle'] }}" class="d-inline-block">
+                                <img src="{{ asset('imgs/partner/vnpay.png') }}" class="img-fluid" alt="{{ $HEADER['metaTitle'] }}">
+                            </a>
+                            <a href="https://zalopay.vn/" target="_BLANK" title="{{ $HEADER['metaTitle'] }}">
+                                <img src="{{ asset('imgs/partner/zalopay.png') }}" class="img-fluid" alt="{{ $HEADER['metaTitle'] }}">
+                            </a>
+                            <a href="https://vinid.net/" target="_BLANK" title="{{ $HEADER['metaTitle'] }}">
+                                <img src="{{ asset('imgs/partner/vinid.webp') }}" class="img-fluid" alt="{{ $HEADER['metaTitle'] }}">
+                            </a>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col--12-ipad">
@@ -241,11 +247,17 @@
                 </div>
                 <div class="partner--mobile__wrap">
                     <div class="partner--mobile">
-                        <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn1"></i></a>
-                        <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn2"></i></a>
+                        <a href="https://vnpay.vn/" target="_BLANK" title="{{ $HEADER['metaTitle'] }}">
+                            <img src="{{ asset('imgs/partner/vnpay.png') }}" alt="{{ $HEADER['metaTitle'] }}">
+                        </a>
+                        <a href="https://zalopay.vn/" target="_BLANK" title="{{ $HEADER['metaTitle'] }}" class="d-inline-block">
+                            <img src="{{ asset('imgs/partner/zalopay.png') }}" class="img-fluid" alt="{{ $HEADER['metaTitle'] }}">
+                        </a>
                     </div>
                     <div class="partner--mobile">
-                        <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn3"></i></a>
+                        <a href="https://vinid.net/" target="_BLANK" title="{{ $HEADER['metaTitle'] }}">
+                            <img src="{{ asset('imgs/partner/vinid.webp') }}" class="img-fluid" alt="{{ $HEADER['metaTitle'] }}">
+                        </a>
                         <a href="" title="{{ $HEADER['metaTitle'] }}"><i class="d-inline-block icon-pn4"></i></a>
                     </div>
                     <div class="partner--mobile">
@@ -366,6 +378,14 @@
         <script>
             $(window).on('load', function(){
                 toastr.success("{{Session::get('ACTION_MSG') }}")
+            });
+        </script>
+        @endif
+
+        @if (session('ACTION_STATUS') == 'WARNING')
+        <script>
+            $(window).on('load', function(){
+                toastr.warning("{{Session::get('ACTION_MSG') }}")
             });
         </script>
         @endif
