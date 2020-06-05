@@ -27,3 +27,5 @@ Route::post('/media/upload', "MediaController@upload")->name('api.media.upload')
 Route::post('/fake/upload', function(){
     return response()->json([ 'status' => true ]);
 });
+
+Route::post('/nhaxe/upload', "ApiController@uploadFromNhaxe")->name('api.nhaxe.upload');
