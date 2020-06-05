@@ -57,7 +57,7 @@ class ApiController extends Controller
 
         //shit from old ver
         if($img) {
-            return response()->json(['img' => $img]);
+            return response()->json(['img' => $img, 'status' => true]);
         } else {
             return response()->json(['status' => false]);
         }
