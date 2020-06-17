@@ -30,7 +30,6 @@ class UploadService
 
     public function uploadBase64($data) {
         $path = date("Y") . '/' . date('m') . '/' . date('d') . '/' . $data['name'].'.'. $data['ext'];
-        
         if( Storage::disk('public_uploads')->put($path, file_get_contents( 'data:' . $data['type'] . ';base64,'.$data['img'] )) ) {
             return "upload/web/" . $path;
         } 
