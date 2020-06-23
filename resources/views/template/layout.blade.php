@@ -215,7 +215,8 @@
                         <div class="footer__company__address">
                             <p><span>Chi nhánh Phía Nam</span> - Email: anvuihcm@anvui.vn - Điện thoại : 1900 1911 Ext 2</p>
                             <p>Địa chỉ: J65 Lầu 6, Toà nhà Sinh Lợi Plaza, KĐT Trung Sơn, Bình Chánh, Hồ Chí Minh</p>
-                            <p>Hotline: 038 776 4444</p>
+                            {{-- <p>Hotline: 038 776 4444</p>  --}}
+                            <p>Hotline: 024.9999.6666</p>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6  col--12-ipad">
