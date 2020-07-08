@@ -38,10 +38,11 @@ class RegisterUseController extends Controller
         
         Log::info( $res );
 
-        if( $body['code'] >= 200 && $body['code'] < 300 ) {
+	if( $body['code'] >= 200 && $body['code'] < 300 ) {
             $request->session()->flash('ACTION_STATUS', 'SUCCESS');
             $request->session()->flash('ACTION_MSG', 'Đăng ký thành công ! Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.');
-        } else {
+	} else {
+		Log::error('call api fail !');
             if($body['results']['error']['message'] == 'COMPANY_PHONE_NUMBER_EXISTED') {
                 $request->session()->flash('ACTION_STATUS', 'WARNING');
                 $request->session()->flash('ACTION_MSG', 'Số điện thoại này đã được đăng ký ! Vui lòng thử lại.');
