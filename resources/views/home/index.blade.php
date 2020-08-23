@@ -117,13 +117,13 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div id="js_custommer__carousel" class="custommer__carousel owl-carousel owl-theme">
                     <div class="item">
-                        <a href="">
-                            <img src="{{ asset('imgs/custommer/futa.png') }}" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
+                        <a href="https://halan.vn/">
+                            <img src="https://cdn.anvui.vn/uploadv2/web/36/3692/basicinformation/2020/04/03/05/37/1585892256_1585127434_logohalan.png" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
                         </a>
                     </div>
                     <div class="item">
                         <a href="">
-                            <img src="{{ asset('imgs/custommer/trungthanh.png') }}" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
+                            <img src="http://xevananh.com/Data/style/site/images/logo.jpg" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
                         </a>
                     </div>
                     <div class="item">
