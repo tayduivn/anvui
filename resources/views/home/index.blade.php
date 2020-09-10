@@ -123,7 +123,7 @@
                     </div>
                     <div class="item">
                         <a href="">
-                            <img src="http://xevananh.com/Data/style/site/images/logo.jpg" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
+                            <img src="https://cdn.anvui.vn/uploadv2/web/37/3703/basicinformation/2020/04/13/02/57/1586789862_logo.jpg" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
                         </a>
                     </div>
                     <div class="item">
