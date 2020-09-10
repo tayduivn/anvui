@@ -414,6 +414,13 @@
     @endif
 
     <script>
+    $(document).ready(function() {
+
+        if(window.location.href.indexOf('#register') != -1) {
+            $('#modal--register').modal('show');
+        }
+
+        });
         $( document ).ready(function() {
             $("#toc").tocify({
                 showEffect: "fadeIn",
