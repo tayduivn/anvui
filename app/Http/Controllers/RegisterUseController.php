@@ -27,7 +27,7 @@ class RegisterUseController extends Controller
             'address' => $params['address']
         ];
 
-        $curl = curl_init('https://crm-anvui.appspot.com/customer/create');
+        $curl = curl_init('https://crm-anvui.el.r.appspot.com/customer/create');
 		curl_setopt($curl, CURLOPT_POST,1);
 		curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($paramsCRM));
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
