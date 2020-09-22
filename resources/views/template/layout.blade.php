@@ -420,7 +420,7 @@
             $('#modal--register').modal('show');
         }
 
-        });
+    });
         $( document ).ready(function() {
             $("#toc").tocify({
                 showEffect: "fadeIn",

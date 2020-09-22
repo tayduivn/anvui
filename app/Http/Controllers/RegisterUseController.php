@@ -32,11 +32,10 @@ class RegisterUseController extends Controller
 		curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($paramsCRM));
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-		$res = curl_exec($curl);
+        $res = curl_exec($curl);
+        Log::info( curl_getinfo($curl) );
 		curl_close($curl);
         $body = json_decode($res, true);
-        
-        Log::info( $res );
 
 	if( $body['code'] >= 200 && $body['code'] < 300 ) {
             $request->session()->flash('ACTION_STATUS', 'SUCCESS');
