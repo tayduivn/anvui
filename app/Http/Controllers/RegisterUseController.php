@@ -26,17 +26,19 @@ class RegisterUseController extends Controller
             'phoneNumber' => $params['phone'],
             'address' => $params['address']
         ];
-
-        $curl = curl_init('https://crm-anvui.el.r.appspot.com/customer/create');
-		curl_setopt($curl, CURLOPT_POST,1);
+	
+	$curl = curl_init('https://crm-anvui.el.r.appspot.com/customer/create');
+	curl_setopt($curl, CURLOPT_POST,1);
+	curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+                        'Content-type: application/json'
+                ));
 		curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($paramsCRM));
-		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 		$res = curl_exec($curl);
 		curl_close($curl);
         $body = json_decode($res, true);
         
-        Log::info( $res );
+        //Log::info( json_encode($body) );
 
 	if( $body['code'] >= 200 && $body['code'] < 300 ) {
             $request->session()->flash('ACTION_STATUS', 'SUCCESS');
