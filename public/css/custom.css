@@ -1277,6 +1277,10 @@ margin-bottom: 24px;
     max-width: 538px;
 }
 
+.owl-carousel .owl-item img {
+    height: 70px!important;
+    width: auto!important;
+}
 
 @media only screen and (max-width: 1200px) {
     .avnavbar--destop{ display: none; }
