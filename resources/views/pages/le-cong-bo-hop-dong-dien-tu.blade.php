@@ -11,7 +11,7 @@
 </head>
 <body>
 <section class="banner">
-<img src="/themes/99/public/imgs/hlhddt.jpg" alt="" class="banner">
+<img src="https://halan.vn/themes/99/public/imgs/hlhddt.jpg" alt="" class="banner">
 <div class="countdown wow slideInRight" data-wow-duration=".3s">
 <div class="countdown__item" data-countdown-content="days">00</div>
 <div class="countdown__item" data-countdown-content="hours">00</div>
