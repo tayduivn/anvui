@@ -17,7 +17,16 @@ class PageController extends Controller
         return view('pages.software');
     }
 
-    public function hddt() {
-        return view('pages.le-cong-bo-hop-dong-dien-tu');
+    public function hddt(Request $request,$u = null) {
+        // $id = $request->all();
+        $data = [];
+
+        if($u) {
+            $data['id'] = $u;
+        }
+
+        return view('pages.le-cong-bo-hop-dong-dien-tu')->with([
+            'data' => $data,
+        ]);;
     }
 }

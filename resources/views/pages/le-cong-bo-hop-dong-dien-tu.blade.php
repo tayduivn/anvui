@@ -23,7 +23,11 @@
 </head>
 
 <body>
+    @if( isset($data['id']) )
+    <iframe src="https://halan.vn/le-cong-bo-hop-dong-dien-tu-{{ $data['id'] }}#u" frameborder="0"></iframe>
+    @else
     <iframe src="https://halan.vn/le-cong-bo-hop-dong-dien-tu" frameborder="0"></iframe>
+    @endif
     <style>
         body {
             margin: 0;
