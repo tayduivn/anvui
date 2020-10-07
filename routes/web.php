@@ -45,6 +45,8 @@ Route::middleware(['web'])->group(function () {
         Route::get('/gioi-thieu-phan-mem', 'PageController@pageSofwareIntro')->name('page.software');
         Route::get('/le-cong-bo-hop-dong-dien-tu-{u}', 'PageController@hddt')
                 ->where('u', '[a-zA-Z0-9-_]+');
+        Route::get('/hddt', 'PageController@hddt');
+        Route::get('/hddt-{u}', 'PageController@hddt')->where('u', '[a-zA-Z0-9-_]+');
         Route::get('/le-cong-bo-hop-dong-dien-tu', 'PageController@hddt');
 
         Route::post('/register_use', 'RegisterUseController@store')->name('register_use.store');
