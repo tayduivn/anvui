@@ -43,7 +43,7 @@ Route::middleware(['web'])->group(function () {
         
 
         Route::get('/gioi-thieu-phan-mem', 'PageController@pageSofwareIntro')->name('page.software');
-
+        Route::get('/le-cong-bo-hop-dong-dien-tu', 'PageController@hddt');
         Route::post('/register_use', 'RegisterUseController@store')->name('register_use.store');
 
         

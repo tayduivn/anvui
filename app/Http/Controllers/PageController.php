@@ -16,4 +16,8 @@ class PageController extends Controller
 
         return view('pages.software');
     }
+
+    public function hddt() {
+        return view('pages.le-cong-bo-hop-dong-dien-tu');
+    }
 }
