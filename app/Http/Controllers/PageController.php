@@ -23,11 +23,13 @@ class PageController extends Controller
         $listUser = [
 			['id' => 'vip1', 'name' => 'Bà Phan Thị Thu Hiền, Phó tổng cục trưởng Tổng Cục Đường Bộ Việt Nam'],
 			['id' => 'vip8', 'name' => 'Hội Doanh Nghiệp Vận Tải Hành Khách Công Cộng Bằng Xe Buýt Các Tỉnh Miền Bắc'],
+			['id' => 'vip2',	'name' => 'Ông Đỗ Thanh Bình - Phó Cục trưởng CSGT Bộ Công An'],
+
 			['id' => 'hh1', 'name' => 'Hội doanh nghiệp vận tải buýt miền bắc' ],
 			['id' => 'hh2', 'name' => 'Hiệp hội doanh nghiệp tỉnh Tuyên Quang ' ],
 			['id' => 'hh3', 'name' => 'Hiệp hôi vận tải ô tô Thái Nguyên' ],
 			['id' => 'hh4', 'name' => 'Hiệp hội vận tải ô tô Việt Nam ' ],
-			['id' => 'hh5', 'name' => 'Hiệp hội doanh nghiệp tỉnh Thái Nguyên' ],
+			['id' => 'hh5', 'name' => 'Lãnh đạo hiệp hội doanh nghiệp tỉnh Thái Nguyên' ],
 			['id' => 'hh6', 'name' => 'Hiệp hội du lịch tỉnh Thái Nguyên ' ],
 			['id' => 'vip5', 'name' => 'Anh Trần Quang Hưng, Phó Bí thư Thành đoàn Hà Nội'],
 			[ 'id' => 1, 'name' =>	'Lãnh Đạo Tổng Cục Đường Bộ Việt Nam' ],
@@ -114,6 +116,9 @@ class PageController extends Controller
 			[ 'id' => 82, 'name' =>	'Đại diện VinaCapital Venture'],
 			[ 'id' => 83, 'name' =>	'Anh Ôn Như Bình - Giám Đốc Kinh Doanh Chiến Lược VNPAY'],
 			[ 'id' => 84, 'name' =>	'Ông Trần Quang Bình - Vụ Trưởng Vụ Vận Tải Tồng Cục Đường Bộ Việt Nam'],
+			[ 'id' => 90, 'name' =>	'Lãnh đạo Phòng Quản lí vận tải sở Giao thông vận tải tỉnh Tuyên Quang '],
+			[ 'id' => 91, 'name' =>	'Lãnh đạo Hiệp hội du lịch tỉnh Thái Nguyên'],
+			[ 'id' => 92, 'name' =>	'Ông Trần Đăng Huy - Tổng Giám Đốc Công Ty Cổ Phần Đồng Hành Goldman'],
 		];
 
 		if( $u ) {
