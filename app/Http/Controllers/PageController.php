@@ -119,6 +119,8 @@ class PageController extends Controller
 			[ 'id' => 90, 'name' =>	'Lãnh đạo Phòng Quản lí vận tải sở Giao thông vận tải tỉnh Tuyên Quang '],
 			[ 'id' => 91, 'name' =>	'Lãnh đạo Hiệp hội du lịch tỉnh Thái Nguyên'],
 			[ 'id' => 92, 'name' =>	'Ông Trần Đăng Huy - Tổng Giám Đốc Công Ty Cổ Phần Đồng Hành Goldman'],
+			[ 'id' => 93, 'name' =>	'Ông Thái Văn Thắng- Giám Đốc Công Ty TNHH Vận Tải & Thương Mại Quốc Tê Bình Minh'],
+			[ 'id' => 94, 'name' =>	'Anh Đỗ Công Thủy - Phó vụ trưởng vụ vận tải - Tổng Cục Đường Bộ Việt Nam'],
 		];
 
 		if( $u ) {
