@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lễ công bố nền tảng hợp đồng điện tử</title>
+    <meta property="og:image" content="https://halan.vn/themes/99/public/imgs/hlhddt19.jpg"/>
+	<meta property="og:image:width" content="600" />
+	<meta property="og:image:height" content="500" />
     <link rel="shortcut icon" href="https://anvui.vn/favicon.png">
     <!-- Retina iPad Touch Icon-->
     <link rel="apple-touch-icon" sizes="144x144" href="https://anvui.vn/favicon.png">
@@ -15,18 +18,13 @@
     <!-- Standard iPhone Touch Icon-->
     <link rel="apple-touch-icon" sizes="57x57" href="https://anvui.vn/favicon.png">
 
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap&subset=vietnamese">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
-        crossorigin="anonymous" />
 </head>
 
 <body>
     @if( isset($data['id']) )
-    <iframe src="https://halan.vn/le-cong-bo-hop-dong-dien-tu-{{ $data['id'] }}#u" frameborder="0"></iframe>
+    <iframe src="https://halan.vn/le-cong-bo-hop-dong-dien-tu-{{ $data['id'] }}#u" id="main-content-iframe" frameborder="0" onload="document.title=parent.frames['cframe'].document.title;"></iframe>
     @else
-    <iframe src="https://halan.vn/le-cong-bo-hop-dong-dien-tu" frameborder="0"></iframe>
+    <iframe src="https://halan.vn/le-cong-bo-hop-dong-dien-tu" id="main-content-iframe" frameborder="0" onload="document.title=parent.frames['cframe'].document.title;"></iframe>
     @endif
     <style>
         body {
