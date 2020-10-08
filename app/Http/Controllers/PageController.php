@@ -131,6 +131,9 @@ class PageController extends Controller
 			[ 'id' => 101, 'name' =>	'Anh Đỗ Văn Bằng - Giám đốc Công Ty TNHH Thương Mại & Dịch Vụ Minh Thành Phát '],
 			[ 'id' => 102, 'name' =>	'Anh Công- Đại diện Công Ty TNHH Thương Mại & Dịch Vụ Minh Thành Phát '],
 			[ 'id' => 103, 'name' =>	'Đội Cảnh sát giao thông số 2'],
+			[ 'id' => 104, 'name' =>	'Ông Trịnh Quang Mười - Giám Đốc Công Ty TNHH Thương Mại Vận Tải Quang Mười'],
+			[ 'id' => 105, 'name' =>	'Ông Nguyễn Huy Võ - Giám Đốc Công Ty TNHH Thương Mại Và Dịch Vụ Huy Võ'],
+			[ 'id' => 106, 'name' =>	'Ông Lê Thanh Bình - Giám Đốc Công Ty Cổ Phần Đầu Tư Và Phát Triển Du Lịch Ecosapa'],
 		];
 
 		if( $u ) {
