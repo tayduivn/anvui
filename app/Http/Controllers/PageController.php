@@ -24,6 +24,7 @@ class PageController extends Controller
 			['id' => 'vip1', 'name' => 'Bà Phan Thị Thu Hiền, Phó tổng cục trưởng Tổng Cục Đường Bộ Việt Nam'],
 			['id' => 'vip8', 'name' => 'Hội Doanh Nghiệp Vận Tải Hành Khách Công Cộng Bằng Xe Buýt Các Tỉnh Miền Bắc'],
 			['id' => 'vip2',	'name' => 'Ông Đỗ Thanh Bình - Phó Cục trưởng CSGT Bộ Công An'],
+			['id' => 'vip6', 'name' => 'Ông Bùi Thế Duy - Thứ trưởng Bộ Khoa Học và Công Nghệ'],
 
 			['id' => 'hh1', 'name' => 'Hội doanh nghiệp vận tải buýt miền bắc' ],
 			['id' => 'hh2', 'name' => 'Hiệp hội doanh nghiệp tỉnh Tuyên Quang ' ],
@@ -121,6 +122,15 @@ class PageController extends Controller
 			[ 'id' => 92, 'name' =>	'Ông Trần Đăng Huy - Tổng Giám Đốc Công Ty Cổ Phần Đồng Hành Goldman'],
 			[ 'id' => 93, 'name' =>	'Ông Thái Văn Thắng- Giám Đốc Công Ty TNHH Vận Tải & Thương Mại Quốc Tê Bình Minh'],
 			[ 'id' => 94, 'name' =>	'Anh Đỗ Công Thủy - Phó vụ trưởng vụ vận tải - Tổng Cục Đường Bộ Việt Nam'],
+			
+			[ 'id' => 96, 'name' =>	'Anh Trần Minh Trung - Ủy viên HĐQT Công ty AN VUI'],
+			[ 'id' => 97, 'name' =>	'Anh Trần Trí Dũng - Hội đồng cố vấn AN VUI'],
+			[ 'id' => 98, 'name' =>	'Anh Thái Văn Thắng- Phó Giám Đốc Công Ty TNHH Vận Tải & Thương Mại Quốc Tê Bình Minh'],
+			[ 'id' => 99, 'name' =>	'Anh Phong - Đại diện Công Ty Cổ Phần Du Thuyền Đông Dương'],
+			[ 'id' => 100, 'name' =>	'Chú Sơn - Đại diện Công Ty TNHH Thương Mại Nam Cường'],
+			[ 'id' => 101, 'name' =>	'Anh Đỗ Văn Bằng - Giám đốc Công Ty TNHH Thương Mại & Dịch Vụ Minh Thành Phát '],
+			[ 'id' => 102, 'name' =>	'Anh Công- Đại diện Công Ty TNHH Thương Mại & Dịch Vụ Minh Thành Phát '],
+			[ 'id' => 103, 'name' =>	'Đội Cảnh sát giao thông số 2'],
 		];
 
 		if( $u ) {
