@@ -112,6 +112,8 @@ class PageController extends Controller
 			[ 'id' => 80, 'name' =>	'Ông Lê Khánh Hà, Trường Phòng Phóng Viên - Tạp Chí Điện Tử, Tạp Chí Giao Thông Vận Tải'],
 			[ 'id' => 81, 'name' =>	'Ông Hoàng Đức Trung - Giám Đốc Quỹ VinaCapital Venture'],
 			[ 'id' => 82, 'name' =>	'Đại diện VinaCapital Venture'],
+			[ 'id' => 83, 'name' =>	'Anh Ôn Như Bình - Giám Đốc Kinh Doanh Chiến Lược VNPAY'],
+			[ 'id' => 84, 'name' =>	'Ông Trần Quang Bình - Vụ Trưởng Vụ Vận Tải Tồng Cục Đường Bộ Việt Nam'],
 		];
 
 		if( $u ) {
@@ -120,6 +122,13 @@ class PageController extends Controller
 				if($value['id'] == $u) {
 					$data['user'] = $value;
 				}
+			}
+
+			if( !isset($data['user']) ) {
+				$data['user'] = [
+					'id' => 'xxx',
+					'name' => 'Quý khách'
+				];
 			}
 
 		} else {
