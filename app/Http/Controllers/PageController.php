@@ -137,6 +137,7 @@ class PageController extends Controller
 			[ 'id' => 107,	'name' => 'Ban lãnh đạo Công ty Thành Bưởi'],
 			[ 'id' => 108,	'name' => 'Ban lãnh đạo Công ty Hoa Mai Vũng Tàu'],
 			[ 'id' => 109,	'name' => 'Ông Nguyễn Đình Thuyên - Tổng Giám Đốc CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN THƯƠNG HIỆU ADAM VIỆT'],
+			[ 'id' => 110, 	'name' => 'Quý Báo Đài Đưa Tin'],
 		];
 
 		if( $u ) {

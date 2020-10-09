@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thư mời {{ $data['user']['name'] }} đến dự lễ công bố nền tảng hợp đồng điện tử</title>
-	<meta name="description" content="Ban lãnh đạo HÀ LAN & AN VUI Trân trọng kính mời {{ $data['user']['name'] }} đến dự lễ công bố nền tảng hợp đồng điện tử trong lĩnh vực vận tải hành khách">
+	<meta name="description" content="Ban lãnh đạo AN VUI & HÀ LAN Trân trọng kính mời {{ $data['user']['name'] }} đến dự lễ công bố nền tảng hợp đồng điện tử trong lĩnh vực vận tải hành khách">
     <meta property="og:image" content="https://halan.vn/themes/99/public/imgs/hlhddt19.jpg"/>
 	<meta property="og:image:width" content="600" />
 	<meta property="og:image:height" content="500" />
