@@ -136,6 +136,7 @@ class PageController extends Controller
 			[ 'id' => 106, 'name' => 'Ông Lê Thanh Bình - Giám Đốc Công Ty Cổ Phần Đầu Tư Và Phát Triển Du Lịch Ecosapa'],
 			[ 'id' => 107,	'name' => 'Ban lãnh đạo Công ty Thành Bưởi'],
 			[ 'id' => 108,	'name' => 'Ban lãnh đạo Công ty Hoa Mai Vũng Tàu'],
+			[ 'id' => 109,	'name' => 'Ông Nguyễn Đình Thuyên - Tổng Giám Đốc CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN THƯƠNG HIỆU ADAM VIỆT'],
 		];
 
 		if( $u ) {
