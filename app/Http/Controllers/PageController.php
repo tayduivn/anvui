@@ -141,6 +141,10 @@ class PageController extends Controller
 			[ 'id' => 115, 	'name' => 'Công ty cho thuê tài chính TNHH MTV ngân hàng TMCP công thương Việt Nam'],
 			[ 'id' => 116,	'name' => 'Anh Chị Tuyết Linh'],
 			[ 'id' => 117,	'name' => 'Anh Chị Vực Thị'],
+			[ 'id' => 118, 'name' =>	'Anh Chị Cương Uyên '],
+			[ 'id' => 119, 'name' =>	'Bà Nguyễn Thị Hoà - Giám Đốc Công ty cổ phần vận tải du lịch Hưng Long'],
+			[ 'id' => 120, 'name' =>	'Ông Hoàng Trọng Long - Giám Đốc Công Ty TNHH Thương Mại Sản Xuất Và Dịch Vụ Hoàng Phương'],
+			[ 'id' => 121, 'name' =>	'Ban lãnh đạo công ty TNHH vận tải Hoàng Công'],
 		];
 
 		if( $u ) {
