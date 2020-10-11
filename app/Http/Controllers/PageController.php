@@ -145,6 +145,9 @@ class PageController extends Controller
 			[ 'id' => 119, 'name' =>	'Bà Nguyễn Thị Hoà - Giám Đốc Công ty cổ phần vận tải du lịch Hưng Long'],
 			[ 'id' => 120, 'name' =>	'Ông Hoàng Trọng Long - Giám Đốc Công Ty TNHH Thương Mại Sản Xuất Và Dịch Vụ Hoàng Phương'],
 			[ 'id' => 121, 'name' =>	'Ban lãnh đạo công ty TNHH vận tải Hoàng Công'],
+			[ 'id' => 122,	'name' => 'Công ty Hà Lan'],
+			[ 'id' => 123,	'name' => 'Ngân hàng Nông nghiệp và Phát triển Nông thôn tỉnh Thái Nguyên'],
+			[ 'id' => 124,	'name' => 'NGÂN HÀNG THƯƠNG MẠI CỔ PHẦN CÔNG THƯƠNG VIỆT NAM - CHI NHÁNH THÁI NGUYÊN'],
 		];
 
 		if( $u ) {
