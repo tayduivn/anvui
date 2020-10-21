@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap&subset=vietnamese">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}?v=1.0.3">
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}?v={{ time() }}">
-    <!-- <script async charset="utf-8" src="//cdn.iframe.ly/embed.js"></script> -->
+    <script async charset="utf-8" src="//cdn.iframe.ly/embed.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169847335-1"></script>
     <script>
