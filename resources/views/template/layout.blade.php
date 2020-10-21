@@ -46,6 +46,12 @@
 
     gtag('config', 'UA-169847335-1');
     </script>
+    <style>
+        figure.image.image_resized {
+            margin-right: auto;
+            margin-left: auto
+        }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
