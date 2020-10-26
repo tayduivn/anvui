@@ -51,6 +51,16 @@
             margin-right: auto;
             margin-left: auto
         }
+
+        .partner--mobile a {
+            display: block;
+            margin-right: 40px;
+            width: calc(50% - 40px);
+        }
+
+        .partner--mobile a img {
+            max-width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -268,7 +278,7 @@
                 <div class="partner--mobile__wrap">
                     <div class="partner--mobile">
                         <a href="https://vnpay.vn/" target="_BLANK" title="{{ $HEADER['metaTitle'] }}">
-                            <img src="{{ asset('imgs/partner/vnpay.png') }}" alt="{{ $HEADER['metaTitle'] }}">
+                            <img src="https://vnpay.vn/wp-content/uploads/2020/07/Logo-VNPAYQR-update.png" alt="{{ $HEADER['metaTitle'] }}">
                         </a>
                         <a href="https://zalopay.vn/" target="_BLANK" title="{{ $HEADER['metaTitle'] }}" class="d-inline-block">
                             <img src="{{ asset('imgs/partner/zalopay.png') }}" class="img-fluid" alt="{{ $HEADER['metaTitle'] }}">
