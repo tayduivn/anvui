@@ -247,7 +247,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col--12-ipad">
                         <div class="partner">
                             <a href="https://vnpay.vn/" target="_BLANK" title="{{ $HEADER['metaTitle'] }}" class="d-inline-block">
-                                <img src="{{ asset('imgs/partner/vnpayqr.png') }}" class="img-fluid" alt="{{ $HEADER['metaTitle'] }}">
+                                <img src="https://vnpay.vn/wp-content/uploads/2020/07/Logo-VNPAYQR-update.png" class="img-fluid" alt="{{ $HEADER['metaTitle'] }}">
                             </a>
                             <a href="https://zalopay.vn/" target="_BLANK" title="{{ $HEADER['metaTitle'] }}">
                                 <img src="{{ asset('imgs/partner/zalopay.png') }}" class="img-fluid" alt="{{ $HEADER['metaTitle'] }}">
