@@ -89,7 +89,7 @@ $iconGGplay = '<svg width="143" height="48" viewBox="0 0 143 48" fill="none" xml
     <meta name=twitter:creator content="">
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap&subset=vietnamese">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}?v=1.0.3">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}?v=1.0.4">
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}?v={{ time() }}">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169847335-1"></script>
