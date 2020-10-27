@@ -1409,3 +1409,10 @@ margin-bottom: 24px;
     .partner { display: none; }
     .partner--mobile__wrap { display: block; }
 }
+
+@media screen and (max-width: 800px) {
+    .wow{
+        animation-name: none !important;
+        visibility: visible !important;
+    }
+}
