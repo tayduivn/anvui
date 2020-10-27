@@ -625,6 +625,11 @@ ul, p, label, h1,h2,h3,h4,h5,h6 { margin: 0; }
     /* margin-right: 40px; */
     /* width: calc(50% - 40px); */
 }
+
+.partner--mobile img {
+    height: 51px;
+    width: auto;
+}
 .partner__head {
     margin-bottom: 16px;
     font-style: normal;
