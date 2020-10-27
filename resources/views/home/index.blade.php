@@ -39,7 +39,7 @@
                 <div class="whychose__content wow slideInLeft" data-wow-duration=".3s">
                     <p>Cuộc cách mạng công nghiệp lần thứ 4 (cách mạng công nghiệp 4.0) đang ảnh hưởng, tác động sâu sắc đến quốc gia, mỗi ngành, lĩnh vực, doanh nghiệp và người dân. Vì vậy, ngành GTVT cũng không nằm ngoài ảnh hưởng này.</p>
                     <p>Giờ đây không còn doanh nghiệp to thắng doanh nghiệp nhỏ mà là doanh nghiệp nhanh thắng doanh nghiệp chậm. Nếu thiếu tiền thì có thể đi vay, thiếu xe thì có thể đi thuê nhưng thiếu hành khách là thiếu tất cả. Chính vì thế việc ứng dụng công nghệ vào quản lý điều hành giúp doanh nghiệp vận tải tăng doanh thu, tiết kiệm chi phí và nâng cao năng lực cạnh tranh trong thời đại mới. Chúng tôi giúp bạn thực hiện điều đó!</p>
-                    <a href="" class="btn--reg">ĐĂNG KÝ TƯ VẤN</a>
+                    <a href="" class="btn--reg" data-toggle="modal" data-target="#modal--register">ĐĂNG KÝ TƯ VẤN</a>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col--hidden-ipad">

@@ -13,7 +13,7 @@
             <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col--12-ipad">
                 <div class="intro-page__content">
                     <h3 class="js_tock__mock">Lời giới thiệu</h3>
-                    <h2 class="page__header">Xin chào, chúng tôi là An Vui <b>?</b></h2>
+                    <h2 class="page__header">Xin chào, chúng tôi là An Vui <b>!</b></h2>
                     <p><a href="">Công ty Công nghệ AN VUI</a> là doanh nghiệp Công nghệ tiên phong với đội ngũ nhân sự chuyên nghiệp và nhiệt huyết, luôn đi đầu trong công tác nghiên cứu và phát triển các ứng dụng trên nền tảng công nghệ mới giúp nhà vận tải quản lý và điều hành hiệu quả. </p>
                     <p>Vận tải luôn là lĩnh vực quan trọng đóng góp tỷ trọng không nhỏ vào GDP của đất nước. Thời gian vừa qua trước cuộc cách mạng công nghệ 4.0 ngành vận tải đang có những thay đổi rất lớn mang tính cách mạng. Một trong những sự kiện quan trọng đó là sự xâm nhập của mô hình taxi công nghệ từ nước ngoài vào Việt Nam tốc độ phát triển cao đang lấn lướt và tạo ra rất nhiều khó khăn cho mô hình Taxi truyền thống, đây là bài học lớn cho những doanh nghiệp vận tải chậm thay đổi và chậm áp dụng công nghệ.</p>
                     <p>Cuộc cách mạng công nghệ 4.0 đã tạo nên những luật chơi mới “Không phải doanh nghiệp lớn thắng doanh nghiệp nhỏ mà là doanh nghiệp nhanh sẽ thắng doanh nghiệp chậm”. Công nghệ cho phép kết nối theo thời gian thực, cắt giảm mọi chi phí không cần thiết, tăng cường quản lý và nâng cao chất lượng dịch vụ, tiếng nói của khách hàng ngày càng trở nên quan trọng hơn đối với sự phát triển của doanh nghiệp đặc biệt là doanh nghiệp vận tải.</p>
