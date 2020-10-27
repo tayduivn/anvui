@@ -25,6 +25,9 @@ ul, p, label, h1,h2,h3,h4,h5,h6 { margin: 0; }
 }
 .custommer__carousel .owl-item .item { text-align: center; }
 .custommer__carousel .owl-item .item a { display: inline-block; }
+.bg-white-100 {
+    background-color: #f9fafc;
+}
 /* @-webkit-keyframes action {
     0% { transform: translateY(0); }
     100% { transform: translateY(30px); }
@@ -454,7 +457,8 @@ ul, p, label, h1,h2,h3,h4,h5,h6 { margin: 0; }
     margin-top: 80px;
     padding: 80px 0px;
     background: linear-gradient(231.14deg, #3969A0 5.45%, #084388 84.04%);
-    border-radius: 40px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
 }
 
 
@@ -899,7 +903,7 @@ ul, p, label, h1,h2,h3,h4,h5,h6 { margin: 0; }
     font-size: 40px;
     line-height: 49px;
     color: #084388;
-    /* margin-bottom: 40px; */
+    margin-bottom: 40px;
 }
 
 .software-page__item {

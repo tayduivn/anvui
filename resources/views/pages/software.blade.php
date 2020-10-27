@@ -58,88 +58,115 @@ $iconGGplay = '<svg width="143" height="48" viewBox="0 0 143 48" fill="none" xml
 @section('content')
 <section class="software-page">
     <h2>Sản phẩm và dịch vụ của An Vui</h2>
+    <img src="{{ asset('imgs/sw/sw_banner.png') }}" class="img-fluid w-100" title="Sản phẩm và dịch vụ của An Vui" alt="Sản phẩm và dịch vụ của An Vui">
+    <section class="software-page__item bg-white-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 text-center mb-3">
+                    <img class="img-fluid" src="{{ asset('imgs/sw/sw1.svg') }}" title="Sản phẩm và dịch vụ của An Vui" alt="Sản phẩm và dịch vụ của An Vui">
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="software-page__para">
+                        <h3 class="wow slideInRight" data-wow-duration=".5s">Phần mềm quản trị bán vé</h3>
+                        <p class="wow slideInRight" data-wow-duration=".7s">Phần mềm giúp quản lý toàn bộ hoạt động bán vé tại nhà xe từ khâu tổng đài đặt vé đến khâu kế toán, Giảm thất thoát trong vận hành.</p>
+                        <p class="wow slideInRight" data-wow-duration=".7s">Xem thêm tại <a href="https://quantri.phanmemnhaxe.com/" title="Sản phẩm và dịch vụ của An Vui">www.quantri.phanmemnhaxe.com</a></p>
+                    </div>
+                    <img class="img-fluid wow slideInRight" data-wow-duration=".9s" src="{{ asset('imgs/sw/sw2.svg') }}" title="Sản phẩm và dịch vụ của An Vui" alt="Sản phẩm và dịch vụ của An Vui">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="container">
-        <div class="row software-page__item">
-            <div class="col-12 col-md-6 text-center mb-3">
-                <img class="img-fluid" src="{{ asset('imgs/sw/sw1.svg') }}" alt="">
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="software-page__para">
-                    <h3>Phần mềm quản trị bán vé</h3>
-                    <p>Phần mềm giúp quản lý toàn bộ hoạt động bán vé tại nhà xe từ khâu tổng đài đặt vé đến khâu kế toán, Giảm thất thoát trong vận hành.</p>
-                    <p>Xem thêm tại <a href="">www.quantri.phanmemnhaxe.com</a></p>
+    <section class="software-page__item">
+        <div class="container">
+            <div class="row ">
+                <div class="col-12 col-md-6">
+                    <div class="software-page__para">
+                        <h3 class="wow slideInLeft" data-wow-duration=".5s">Ứng dụng cho lái phụ xe</h3>
+                        <p class="wow slideInLeft" data-wow-duration=".7s">Ứng dụng giúp tài xế và phụ xe Bán vé dọc đường hoặc đón trả khách đúng điểm dừng đỗ... Chốt chặng và thanh tra trên đường. Đảm bảo tuyệt đối việc gian lận thông qua Phơi lệnh điện tử.</p>
+                    </div>
+                    <!-- <div class="software-page__link">
+                        <a href="" class="d-block">{!! $iconAppStore !!}</a>
+                        <a href="" class="d-block">{!! $iconGGplay !!}</a>
+                    </div> -->
                 </div>
-                <img class="img-fluid" src="{{ asset('imgs/sw/sw2.svg') }}" alt="">
-            </div>
-        </div>
-        <div class="row software-page__item">
-            <div class="col-12 col-md-6">
-                <div class="software-page__para">
-                    <h3>Ứng dụng cho lái phụ xe</h3>
-                    <p>Ứng dụng giúp tài xế và phụ xe Bán vé dọc đường hoặc đón trả khách đúng điểm dừng đỗ... Chốt chặng và thanh tra trên đường. Đảm bảo tuyệt đối việc gian lận thông qua Phơi lệnh điện tử.</p>
-                </div>
-                <!-- <div class="software-page__link">
-                    <a href="" class="d-block">{!! $iconAppStore !!}</a>
-                    <a href="" class="d-block">{!! $iconGGplay !!}</a>
-                </div> -->
-            </div>
-            <div class="col-12 col-md-6 text-center  mt-3">
-                <img class="img-fluid" src="{{ asset('imgs/sw/sw3.svg') }}" alt="">
-            </div>
-        </div>
-        <div class="row software-page__item">
-            <div class="col-12 col-md-6 text-center  mb-3">
-                <img class="img-fluid" src="{{ asset('imgs/sw/sw4.svg') }}" alt="">
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="software-page__para">
-                    <h3>Ứng dụng bán vé cho đại lý</h3>
-                    <p>Là ứng dụng giúp mở rộng kênh phân phối bán vé online cho các đại lý hoặc đẩy vé của nhà xe lên các kênh bán vé online như Zalo, Viettel Pay, Vin ID ... Nhà xe có khả năng chủ động về chính sách bán vé cho đại lý và tỷ lệ hoa hồng. Bảo mật thông tin không bị lộ thông tin hành khách cho đối thủ</p>
-                </div>
-                <!-- <div class="software-page__link">
-                    <a href="" class="d-block">{!! $iconAppStore !!}</a>
-                    <a href="" class="d-block">{!! $iconGGplay !!}</a>
-                </div> -->
-            </div>
-        </div>
-        <div class="row  software-page__item">
-            <div class="col-12 col-md-6">
-                <div class="software-page__para">
-                    <h3>Ứng dụng quản lý hàng hoá</h3>
-                    <p>Phần mềm giành cho doanh nghiệp vận tải hàng hoá, gửi hàng theo xe và chuyển phát chuyên nghiệp. Với các chức năng Giao nhận hàng tại nhà, theo dõi vị trí hàng di chuyển trên đường, quản lý thu hộ COD, Quản lý hàng tồn kho... Chính xác tuyệt đối tránh nhầm lẫn hàng hoá theo Mã vạch QR Code.</p>
-                </div>
-                <!-- <div class="software-page__link">
-                    <a href="" class="d-block">{!! $iconAppStore !!}</a>
-                    <a href="" class="d-block">{!! $iconGGplay !!}</a>
-                </div> -->
-            </div>
-            <div class="col-12 col-md-6 text-center  mt-3">
-                <img class="img-fluid" src="{{ asset('imgs/sw/sw6.svg') }}" alt="">
-            </div>
-        </div>
-        <div class="row  software-page__item">
-            <div class="col-12 col-md-6 text-center  mb-3">
-                <img class="img-fluid" src="{{ asset('imgs/sw/sw7.svg') }}" alt="">
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="software-page__para">
-                    <h3>Tích hợp thanh toán Vé điện tử và hợp đồng điện tử</h3>
-                    <p>AN VUI tích hợp với các kênh thanh toán như QR Code, Ví điện tử đồng thời Giúp Nhà xe Ứng dụng hợp đồng điện tử và Vé điện tử phù hợp với Nghị định 10, Thông tư 12, Nghị định 100 và pháp luật hiện hành.</p>
+                <div class="col-12 col-md-6 text-center  mt-3">
+                    <img class="img-fluid" src="{{ asset('imgs/sw/sw3.svg') }}" title="Sản phẩm và dịch vụ của An Vui" alt="Sản phẩm và dịch vụ của An Vui">
                 </div>
             </div>
         </div>
-        <div class="row  software-page__item">
-            <div class="col-12 col-md-6">
-                <div class="software-page__para">
-                    <h3>Wifi Marketing trên Ô tô</h3>
-                    <p>Là giải pháp quản lý thông tin hành khách, Tích điểm cho hành khách, Bán vé tháng và chăm sóc hành khách tại các phòng vé và trên xe ô tô. Khách hàng được trải nghiệm dịch vụ Wifi mà không cần phải hỏi pass word.. Tạo nên hình ảnh và sự trải nghiệm tuyệt vời cho Hành khách đối với nhà xe</p>
+    </section>
+
+    <section class="software-page__item bg-white-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 text-center  mb-3">
+                    <img class="img-fluid" src="{{ asset('imgs/sw/sw4.svg') }}" title="Sản phẩm và dịch vụ của An Vui" alt="Sản phẩm và dịch vụ của An Vui">
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="software-page__para">
+                        <h3 class="wow slideInRight" data-wow-duration=".5s">Ứng dụng bán vé cho đại lý</h3>
+                        <p class="wow slideInRight" data-wow-duration=".7s">Là ứng dụng giúp mở rộng kênh phân phối bán vé online cho các đại lý hoặc đẩy vé của nhà xe lên các kênh bán vé online như Zalo, Viettel Pay, Vin ID ... Nhà xe có khả năng chủ động về chính sách bán vé cho đại lý và tỷ lệ hoa hồng. Bảo mật thông tin không bị lộ thông tin hành khách cho đối thủ</p>
+                    </div>
+                    <!-- <div class="software-page__link">
+                        <a href="" class="d-block">{!! $iconAppStore !!}</a>
+                        <a href="" class="d-block">{!! $iconGGplay !!}</a>
+                    </div> -->
                 </div>
             </div>
-            <div class="col-12 col-md-6 text-center  mt-3">
-                <img class="img-fluid" src="{{ asset('imgs/sw/sw8.svg') }}" alt="">
+        </div>
+    </section>
+
+    <section class="software-page__item">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="software-page__para">
+                        <h3 class="wow slideInLeft" data-wow-duration=".5s">Ứng dụng quản lý hàng hoá</h3>
+                        <p class="wow slideInLeft" data-wow-duration=".7s">Phần mềm giành cho doanh nghiệp vận tải hàng hoá, gửi hàng theo xe và chuyển phát chuyên nghiệp. Với các chức năng Giao nhận hàng tại nhà, theo dõi vị trí hàng di chuyển trên đường, quản lý thu hộ COD, Quản lý hàng tồn kho... Chính xác tuyệt đối tránh nhầm lẫn hàng hoá theo Mã vạch QR Code.</p>
+                    </div>
+                    <!-- <div class="software-page__link">
+                        <a href="" class="d-block">{!! $iconAppStore !!}</a>
+                        <a href="" class="d-block">{!! $iconGGplay !!}</a>
+                    </div> -->
+                </div>
+                <div class="col-12 col-md-6 text-center  mt-3">
+                    <img class="img-fluid" src="{{ asset('imgs/sw/sw6.svg') }}" title="Sản phẩm và dịch vụ của An Vui" alt="Sản phẩm và dịch vụ của An Vui">
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="software-page__item bg-white-100">
+        <div class="container">
+            <div class="row ">
+                <div class="col-12 col-md-6 text-center  mb-3">
+                    <img class="img-fluid" src="{{ asset('imgs/sw/sw7.svg') }}" title="Sản phẩm và dịch vụ của An Vui" alt="Sản phẩm và dịch vụ của An Vui">
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="software-page__para">
+                        <h3 class="wow slideInRight" data-wow-duration=".5s">Tích hợp thanh toán Vé điện tử và hợp đồng điện tử</h3>
+                        <p class="wow slideInRight" data-wow-duration=".7s">AN VUI tích hợp với các kênh thanh toán như QR Code, Ví điện tử đồng thời Giúp Nhà xe Ứng dụng hợp đồng điện tử và Vé điện tử phù hợp với Nghị định 10, Thông tư 12, Nghị định 100 và pháp luật hiện hành.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="software-page__item">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="software-page__para">
+                        <h3 class="wow slideInLeft" data-wow-duration=".5s">Wifi Marketing trên Ô tô</h3>
+                        <p class="wow slideInLeft" data-wow-duration=".7s">Là giải pháp quản lý thông tin hành khách, Tích điểm cho hành khách, Bán vé tháng và chăm sóc hành khách tại các phòng vé và trên xe ô tô. Khách hàng được trải nghiệm dịch vụ Wifi mà không cần phải hỏi pass word.. Tạo nên hình ảnh và sự trải nghiệm tuyệt vời cho Hành khách đối với nhà xe</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 text-center  mt-3">
+                    <img class="img-fluid" src="{{ asset('imgs/sw/sw8.svg') }}" title="Sản phẩm và dịch vụ của An Vui" alt="Sản phẩm và dịch vụ của An Vui">
+                </div>
+            </div>
+        </div>
+    </section>
 </section>
 @endsection
