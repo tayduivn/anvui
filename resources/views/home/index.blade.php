@@ -4,7 +4,7 @@
 
 <section class="whyneed">
     <div class="container">
-        <h2 class="block__header">Tại sao bạn cần Phần mềm Quản lý nhà xe <b>?</b></h2>  
+        <h2 class="block__header">Hệ sinh thái <b>quản trị toàn diện</b> dành cho nhà xe</h2>  
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col--hidden-ipad">
                 <div class="whyneed__img">
