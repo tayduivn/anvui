@@ -289,8 +289,10 @@ $iconGGplay = '<svg width="143" height="48" viewBox="0 0 143 48" fill="none" xml
                             <p>Hotline: 024.9999.6666</p>
                         </div>
                     </div>
-                    <!-- <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6  col--12-ipad">
-                        <div class="footer__menu">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6  col--12-ipad">
+                        <h3 class="mb-3" style="color: #084388">Bản đồ</h3>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.977243673456!2d105.78417591542703!3d20.99354929435416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acb433453903%3A0x89bf648fedc58921!2zNTggVOG7kSBI4buvdSwgVHJ1bmcgVsSDbiwgTmFtIFThu6sgTGnDqm0sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1603873894117!5m2!1svi!2s" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        <!-- <div class="footer__menu">
                             <a href="" title="{{ $HEADER['metaTitle'] }}">Chính sách bảo mật</a>
                             <a href="" title="{{ $HEADER['metaTitle'] }}">Chính sách hoạt động</a>
                             <a href="" title="{{ $HEADER['metaTitle'] }}">Điều khoản sử dụng</a>
@@ -303,8 +305,8 @@ $iconGGplay = '<svg width="143" height="48" viewBox="0 0 143 48" fill="none" xml
                             <a href="" title="{{ $HEADER['metaTitle'] }}">
                                 {!! $iconGGplay !!}
                             </a>
-                        </div>
-                    </div> -->
+                        </div> -->
+                    </div>
                 </div>
             </div>  
         </div>

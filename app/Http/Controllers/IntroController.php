@@ -8,7 +8,7 @@ class IntroController extends Controller
 {
     public function index() {
         $header = [
-            'meta_title' => "Về chúng tôi",
+            'meta_title' => "Giới thiệu về startup AN VUI",
         ];
 
         $this->setHeader($header);
