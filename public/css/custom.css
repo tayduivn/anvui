@@ -1072,7 +1072,12 @@ ul, p, label, h1,h2,h3,h4,h5,h6 { margin: 0; }
 }
 
 .news-item__title a {
-    color: #084388;
+    color: #232731;
+    transition: .5s ease-in-out;
+}
+
+.news-item__title a:hover{
+    color: #084388
 }
 
 .news-item__desc {
