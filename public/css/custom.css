@@ -184,6 +184,22 @@ ul, p, label, h1,h2,h3,h4,h5,h6 { margin: 0; }
     transform: scale(1);
 }
 
+.owl-dots {
+    margin-top: 40px;
+    text-align: center;
+}
+button.owl-dot {
+    width: 15px;
+    height: 15px;
+    background: #ccc!important;
+    margin-right: 10px;
+    border-radius: 50%!important;
+}
+
+button.owl-dot.active {
+    background: #9a9a9a!important;
+}
+
 .block__header{
     font-style: normal;
     font-weight: 600;
@@ -195,6 +211,10 @@ ul, p, label, h1,h2,h3,h4,h5,h6 { margin: 0; }
 }
 
 .block__header b{
+    color: #F39B13;
+}
+
+.block__header b a {
     color: #F39B13;
 }
 

@@ -516,6 +516,9 @@ $iconGGplay = '<svg width="143" height="48" viewBox="0 0 143 48" fill="none" xml
             loop:true,
             margin:60,
             responsiveClass:true,
+            autoplay: true,
+            autoplayTimeout:3000,
+            autoplayHoverPause: true,
             responsive:{
                 0:{
                     items:1,
@@ -528,7 +531,6 @@ $iconGGplay = '<svg width="143" height="48" viewBox="0 0 143 48" fill="none" xml
                 1000:{
                     items:4,
                     dots:true,
-                    loop:false
                 }
             }
         })
