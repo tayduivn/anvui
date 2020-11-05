@@ -122,18 +122,28 @@
                         </a>
                     </div>
                     <div class="item">
-                        <a href="">
+                        <a href="https://kumhosamco.com.vn">
                             <img src="https://kumhosamco.com.vn/wp-content/uploads/LOGO-KUMHO-web2.png" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
                         </a>
                     </div>
                     <div class="item">
-                        <a href="">
+                        <a href="https://interbuslines.com/">
                             <img src="{{ asset('imgs/custommer/inter.png') }}" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
                         </a>
                     </div>
                     <div class="item">
-                        <a href="">
+                        <a href="https://xevulinh.com/">
                             <img src="{{ asset('imgs/custommer/vulinh.png') }}" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                            <img src="{{ asset('imgs/custommer/hptravel.png') }}" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                            <img src="{{ asset('imgs/custommer/anhhuydatcang.png') }}" class="img-fluid" title="{{ $HEADER['metaTitle'] }}" alt="{{ $HEADER['metaTitle'] }}">
                         </a>
                     </div>
                 </div>
