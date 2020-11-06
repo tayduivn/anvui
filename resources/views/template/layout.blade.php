@@ -118,6 +118,34 @@ $iconGGplay = '<svg width="143" height="48" viewBox="0 0 143 48" fill="none" xml
     </style>
 </head>
 <body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+            xfbml            : true,
+            version          : 'v8.0'
+            });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!-- Your Chat Plugin code -->
+    <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="420231528374168"
+        theme_color="#ff7e29"
+        logged_in_greeting="Xin chào AN VUI rất vui được phục vụ bạn!"
+        logged_out_greeting="Xin chào AN VUI rất vui được phục vụ bạn!">
+    </div>
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6MQNZV"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -459,34 +487,6 @@ $iconGGplay = '<svg width="143" height="48" viewBox="0 0 143 48" fill="none" xml
                 </div>
             </div>
         </div>
-    </div>
-    
-        <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root"></div>
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-            xfbml            : true,
-            version          : 'v8.0'
-            });
-        };
-
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-
-    <!-- Your Chat Plugin code -->
-    <div class="fb-customerchat"
-        attribution=setup_tool
-        page_id="420231528374168"
-        theme_color="#ff7e29"
-        logged_in_greeting="Xin chào AN VUI rất vui được phục vụ bạn!"
-        logged_out_greeting="Xin chào AN VUI rất vui được phục vụ bạn!">
     </div>
 
     <script src="{{ asset('js/app.js') }}?v=1.0.3"></script>
