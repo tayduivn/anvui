@@ -1391,7 +1391,7 @@ margin-bottom: 24px;
     max-width: 538px;
 }
 
-.custommer__carousel .owl-carousel .owl-item img {
+.custommer__carousel img {
     height: 70px!important;
     width: auto!important;
 }
@@ -1426,7 +1426,7 @@ margin-bottom: 24px;
     text-align: center;
 }
 .custommerReview__item img {    
-    width: auto!important;
+    width: 160px!important;
     object-fit: cover;
     height: 160px;
     margin-bottom: 16px;
