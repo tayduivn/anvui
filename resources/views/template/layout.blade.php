@@ -159,7 +159,7 @@ $iconGGplay = '<svg width="143" height="48" viewBox="0 0 143 48" fill="none" xml
                 <!-- Submenu -->
                 <li class="pushy-link"><a href="{{ route('home.index') }}" title="{{ $HEADER['metaTitle'] }}">Trang chủ</a></li>
                 <li class="pushy-link"><a href="{{ route('intro.index') }}" title="{{ $HEADER['metaTitle'] }}">Giới thiệu</a></li>
-                <li class="pushy-link"><a href="{{ route('page.software') }}" title="{{ $HEADER['metaTitle'] }}">Sản phẩm nhà xe</a></li>
+                <li class="pushy-link"><a href="{{ route('page.software') }}" title="{{ $HEADER['metaTitle'] }}">Sản phẩm</a></li>
                 <li class="pushy-link"><a href="{{ route('news.index') }}" title="{{ $HEADER['metaTitle'] }}">Tin tức</a></li>
                 <li class="pushy-link"><a href="{{ route('recruit.index') }}" title="{{ $HEADER['metaTitle'] }}">Tuyển dụng</a></li>
             </ul>
@@ -183,7 +183,7 @@ $iconGGplay = '<svg width="143" height="48" viewBox="0 0 143 48" fill="none" xml
                             <ul class="avnavbar__right">
                                 <li><a href="{{ route('home.index') }}">Trang chủ</a></li>
                                 <li><a href="{{ route('intro.index') }}">Giới thiệu</a></li>
-                                <li><a href="{{ route('page.software') }}">Sản phẩm nhà xe</a></li>
+                                <li><a href="{{ route('page.software') }}">Sản phẩm</a></li>
                                 <li><a href="{{ route('news.index') }}">Tin tức</a></li>
                                 <li><a href="{{ route('recruit.index') }}">Tuyển dụng</a></li>
                                 <li class="language">
@@ -257,7 +257,7 @@ $iconGGplay = '<svg width="143" height="48" viewBox="0 0 143 48" fill="none" xml
                                 <ul>
                                     <li><a href="{{ route('home.index') }}" title="{{ $HEADER['metaTitle'] }}">Trang chủ</a></li>
                                     <li><a href="{{ route('intro.index') }}" title="{{ $HEADER['metaTitle'] }}">Giới thiệu</a></li>
-                                    <li><a href="{{ route('page.software') }}" title="{{ $HEADER['metaTitle'] }}">Sản phẩm nhà xe</a></li>
+                                    <li><a href="{{ route('page.software') }}" title="{{ $HEADER['metaTitle'] }}">Sản phẩm</a></li>
                                     <li><a href="{{ route('news.index') }}" title="{{ $HEADER['metaTitle'] }}">Tin tức</a></li>
                                     <li><a href="{{ route('recruit.index') }}" title="{{ $HEADER['metaTitle'] }}">Tuyển dụng</a></li>
                                     <li><a class="btn--reg" data-toggle="modal" data-target="#modal--register">ĐĂNG KÝ TƯ VẤN</a></li>
@@ -402,7 +402,7 @@ $iconGGplay = '<svg width="143" height="48" viewBox="0 0 143 48" fill="none" xml
                                 <h1>Tối ưu</h1>
                                 <p>Và</p>
                                 <h1>Thuận tiện</h1>
-                                <p>cho mọi nhà xe</p>
+                                <p>cho mọi</p>
                             </div>
                         </div>
                     </div>
