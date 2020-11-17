@@ -49,22 +49,33 @@
                     <h2>Khách hàng nói gì về An Vui <b>?</b></h2>
                     <div id="js_custommerReview" class="custommerReview__carousel owl-carousel owl-theme">
                         <div class="item custommerReview__item">
-                            <img src="{{ asset('imgs/review1.svg') }}" alt="">
+                            <img src="{{ asset('imgs/review1.png') }}" alt="">
                             <h3>Ông Nguyễn Thanh Tùng</h3>
                             <h4>Chủ tịch INTERBUS LINES</h4>
                             <h5>Từ khi ứng dụng AN VUI vào quản lý và điều hành Interbuslines Doanh thu của Interbuslines tăng hơn 200% sau 2 năm ứng dụng. Đồng thời Inter buslines giờ có thể chủ động mở các đại lý phân phối vé tới hành khách giảm đi 1/2 số lượng lao động.</h5>
                         </div>
                         <div class="item custommerReview__item">
                             <img src="{{ asset('imgs/review1.svg') }}" alt="">
-                            <h3>Ông Nguyễn Thanh Tùng</h3>
-                            <h4>Chủ tịch INTERBUS LINES</h4>
-                            <h5>Từ khi ứng dụng AN VUI vào quản lý và điều hành Interbuslines Doanh thu của Interbuslines tăng hơn 200% sau 2 năm ứng dụng. Đồng thời Inter buslines giờ có thể chủ động mở các đại lý phân phối vé tới hành khách giảm đi 1/2 số lượng lao động.</h5>
+                            <h3>Ông Nguyễn Mạnh Hà</h3>
+                            <h4>Chủ tịch của Công ty Vận tải và du lịch Hà Lan đơn vị vận tải quy mô lớn nhất tại Tại Thái Nguyên</h4>
+                            <h5>Khi ứng dụng AN VUI  vào hoạt động quản lý và vận hành Hoạt động của Hà Lan trở nên minh bạch và thuận tiện. Đặc biệt việc ứng dụng hợp đồng điện tử do AN VUI cung cấp cho mảng xe hợp đồng của Hà lan đã mang lại sự thuận tiện giảm chi phí in ấn, lưu trữ và vận hành đáng kể cho Hà Lan.</h5>
+                        </div>
+                        <div class="item custommerReview__item">
+                            <img src="{{ asset('imgs/review1.svg') }}" alt="">
+                            <h3>Ông Nguyễn Thượng Hải</h3>
+                            <h4>Giám đốc Công ty Vận tải Hà Hải Thái Bình</h4>
+                            <h5>Chúng tôi đã sử dụng nhiều phần mềm của những đơn vị khác nhau nhưng cuối cùng lựa chọn AN VUI bởi AN VUI giúp chúng tôi tích hợp từ Tổng đài tự động, website đặt vé và hoạt động bán vé tại phòng vé tất cả trong 1 hệ thống duy nhất tiện dùng và không bị phức tạp liên hệ với nhiều bên.</h5>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="row" style="margin-top: 40px">
+            <div class="col-12">
+                <p>Năm 2019 AN VUI lần đầu tiên nhận vốn đầu tư từ quỹ VinaCapital Ventures.  AN VUI đã có những bước tiến mạnh mẽ trở thành đơn vị số 1 tại Việt Nam cung cấp nền tảng công nghệ tổng thể cho doanh nghiệp vận tải. Hiện nay AN VUI tiếp tục đang gọi những vòng vốn tiếp theo để mở rộng quy mô  và hoàn chỉnh hệ sinh thái tổng thể cho ngành vận tải để mở rộng thị trường sang các nước Đông Nam Á.</p>
+            </div>
+        </div>
         <div class="row" style="margin-top: 80px">
             <div class="col-12">
                 <div class="supporter">
