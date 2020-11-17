@@ -1,7 +1,88 @@
 @extends('template.layout')
 
 @section('content')
-<section class="intro-page">
+<section class="introPage">
+    <h2>Xin chào, chúng tôi là An Vui <b>!</b></h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <p>
+                    AN VUI là Startup công nghệ tiên phong phục vụ cho lĩnh vực vận tải. Với sứ mệnh số hoá ngành vận tải hành khách, giúp giữ vững thị phần, nâng cao năng lực cạnh tranh, giúp các nhà vận tải truyền thống chuyển dịch sang vận tải công nghệ, mang đến những hành trình đi an về vui cho Cộng đồng.  Hiện tại AN VUI đang có mặt tại Thị trường Việt Nam và hướng đến thị trường Đông Nam Á và Châu Á.
+                </p>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <iframe width="100%" height="360" src="https://www.youtube.com/embed/957rPxhYNAw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 40px">
+            <div class="col-12">
+                <p>Được thành lập từ năm 2015 và chính thức công bố sản phẩm nền tảng công nghệ tháng 7 năm 2017. Đến nay AN VUI đã phục vụ hàng trăm doanh nghiệp vận tải quy mô lớn trong cả nước Ứng dụng phần mềm của AN VUI vào quản lý và công cuộc chuyển đổi số cho doanh nghiệp.  AN VUI đã trở thành cầu nối cho các doanh nghiệp vận tải đưa nguồn công suất dư thừa của mình lên các sàn giao dịch vận tải nhằm tăng doanh thu và giảm chi phí vận hành. Mọi hoạt động của doanh nghiệp vận tải đều được tự động và xử lý khoa học trên nền tảng công nghệ mà AN VUI cung cấp.</p>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 40px">
+            <div class="col-md-12">
+                <div id="js_slideImage" class="slideImage__carousel owl-carousel owl-theme">
+                    <div class="item">
+                        <img src="{{ asset('imgs/banner1.svg') }}" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="{{ asset('imgs/banner2.svg') }}" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="{{ asset('imgs/banner3.svg') }}" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="{{ asset('imgs/banner3.svg') }}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 40px">
+            <div class="col-12">
+                <p>AN VUI lọt TOP 17 Startup tiêu biểu của Việt Nam do báo VnExpress tổ chức năm 2016. Sau đó, AN VUI tiếp tục là doanh nghiệp công nghệ vinh dự đã vượt qua 289 dự án lọt vào TOP 10 của Nhân Tài Đất Việt 2017. Là startup duy nhất của Việt Nam vượt qua cuộc thi Seedstars Competition tiến thẳng vào vòng Chung kết Châu Á, AN VUI đã xuất sắc được chọn trở thành 1 trong các đại diện Châu Á tham dự Seedstars World Competition, được tổ chức tại Lausanne, Switzerland.</p>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 40px">
+            <div class="col-12">
+                <div class="custommerReview">
+                    <h2>Khách hàng nói gì về An Vui <b>?</b></h2>
+                    <div id="js_custommerReview" class="custommerReview__carousel owl-carousel owl-theme">
+                        <div class="item custommerReview__item">
+                            <img src="{{ asset('imgs/review1.svg') }}" alt="">
+                            <h3>Ông Nguyễn Thanh Tùng</h3>
+                            <h4>Chủ tịch INTERBUS LINES</h4>
+                            <h5>Từ khi ứng dụng AN VUI vào quản lý và điều hành Interbuslines Doanh thu của Interbuslines tăng hơn 200% sau 2 năm ứng dụng. Đồng thời Inter buslines giờ có thể chủ động mở các đại lý phân phối vé tới hành khách giảm đi 1/2 số lượng lao động.</h5>
+                        </div>
+                        <div class="item custommerReview__item">
+                            <img src="{{ asset('imgs/review1.svg') }}" alt="">
+                            <h3>Ông Nguyễn Thanh Tùng</h3>
+                            <h4>Chủ tịch INTERBUS LINES</h4>
+                            <h5>Từ khi ứng dụng AN VUI vào quản lý và điều hành Interbuslines Doanh thu của Interbuslines tăng hơn 200% sau 2 năm ứng dụng. Đồng thời Inter buslines giờ có thể chủ động mở các đại lý phân phối vé tới hành khách giảm đi 1/2 số lượng lao động.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 80px">
+            <div class="col-12">
+                <div class="supporter">
+                    <h2>Quỹ đầu tư của AN VUI</h2>
+                    <div id="js_supporter" class="supporter__carousel owl-carousel owl-theme">
+                        <div class="item supporter__item">
+                            <img src="{{ asset('imgs/supporter.svg') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    
+</style>
+{{-- <section class="intro-page">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col--hidden-ipad">
@@ -50,5 +131,5 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 @endsection

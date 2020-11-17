@@ -563,6 +563,82 @@ $iconGGplay = '<svg width="143" height="48" viewBox="0 0 143 48" fill="none" xml
             }
         })
 
+        $('#js_slideImage').owlCarousel({
+            loop:true,
+            margin:32,
+            responsiveClass:true,
+            autoplay: true,
+            autoplayTimeout:3000,
+            autoplayHoverPause: true,
+            nav: true,
+            responsive:{
+                0:{
+                    items:1,
+                    dots:true,
+                    nav: false,
+                },
+                600:{
+                    items:2,
+                    dots:false,
+                    nav: true,
+                },
+                1000:{
+                    items:3,
+                    dots:false,
+                    nav: true,
+                }
+            }
+        })
+
+        $('#js_custommerReview').owlCarousel({
+            loop:true,
+            responsiveClass:true,
+            autoplay: true,
+            autoplayTimeout:3000,
+            autoplayHoverPause: true,
+            navText: ['<i class="fa fa-arrow-left" aria-hidden="true"></i>','<i class="fa fa-arrow-right" aria-hidden="true"></i>'],
+            responsive:{
+                0:{
+                    items:1,
+                    dots:true,
+                    nav: false,
+                },
+                600:{
+                    items:1,
+                    dots:true,
+                    nav: false,
+                },
+                1000:{
+                    items:1,
+                    dots:false,
+                    nav: true,
+                }
+            }
+        })
+
+        $('#js_supporter').owlCarousel({
+            loop:true,
+            responsiveClass:true,
+            autoplay: true,
+            autoplayTimeout:3000,
+            autoplayHoverPause: true,
+            nav: true,
+            responsive:{
+                0:{
+                    items:1,
+                    dots:true,
+                },
+                600:{
+                    items:1,
+                    dots:true,
+                },
+                1000:{
+                    items:1,
+                    dots:true,
+                }
+            }
+        })
+
         
         $('#js-form--register').validate({
             rules: {
