@@ -79,7 +79,7 @@
         <div class="row" style="margin-top: 80px">
             <div class="col-12">
                 <div class="supporter">
-                    <h2>Quỹ đầu tư của AN VUI</h2>
+                    <h2>Quỹ đầu tư vào AN VUI</h2>
                     <div id="js_supporter" class="supporter__carousel owl-carousel owl-theme">
                         <div class="item supporter__item">
                             <img src="{{ asset('imgs/supporter.svg') }}" alt="">
