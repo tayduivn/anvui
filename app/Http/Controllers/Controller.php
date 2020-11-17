@@ -18,7 +18,7 @@ class Controller extends BaseController
         $header['metaTitle'] = !empty($data['meta_title']) ? $data['meta_title']  : config('HEADER')['metaTitle'];
         $header['metaDesc'] = !empty($data['meta_desc']) ? $data['meta_desc']  : config('HEADER')['metaDesc'];
         $header['metaKeyword'] = !empty($data['meta_keyword']) ? $data['meta_keyword']  : config('HEADER')['metaKeyword'];
-        $header['img'] = !empty($data['img']) ? $data['img']  : "https://anvui.vn/imgs/banner1.svg";
+        $header['img'] = !empty($data['img']) ? $data['img']  : "https://anvui.vn/upload/web/2020/11/03/1604385406_the-nao-la-mot-phan-mem-quan-ly-nha-xe-tot.png";
         
         Config::set('HEADER', $header);
         View::share('HEADER', $header );

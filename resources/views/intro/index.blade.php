@@ -58,7 +58,7 @@
                             <img src="{{ asset('imgs/review1.png') }}" alt="">
                             <h3>Ông Nguyễn Thanh Tùng</h3>
                             <h4>Chủ tịch INTERBUS LINES</h4>
-                            <h5><i> "Từ khi ứng dụng AN VUI vào quản lý và điều hành Interbuslines Doanh thu của Interbuslines tăng hơn 200% sau 2 năm ứng dụng. Đồng thời Inter buslines giờ có thể chủ động mở các đại lý phân phối vé tới hành khách giảm đi 1/2 số lượng lao động."</i></h5>
+                            <h5><i> "Từ khi ứng dụng AN VUI vào quản lý và điều hành Interbus lines Doanh thu của Interbuslines tăng hơn 200% sau 2 năm ứng dụng. Đồng thời Inter buslines giờ có thể chủ động mở các đại lý phân phối vé tới hành khách giảm đi 1/2 số lượng lao động."</i></h5>
                         </div>
                         <div class="item custommerReview__item">
                             <img src="{{ asset('imgs/review3.png') }}" alt="">
