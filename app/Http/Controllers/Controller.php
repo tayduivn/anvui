@@ -18,7 +18,7 @@ class Controller extends BaseController
         $header['metaTitle'] = !empty($data['meta_title']) ? $data['meta_title']  : config('HEADER')['metaTitle'];
         $header['metaDesc'] = !empty($data['meta_desc']) ? $data['meta_desc']  : config('HEADER')['metaDesc'];
         $header['metaKeyword'] = !empty($data['meta_keyword']) ? $data['meta_keyword']  : config('HEADER')['metaKeyword'];
-        $header['img'] = !empty($data['img']) ? $data['img']  : config('HEADER')['metaKeyword'];
+        $header['img'] = !empty($data['img']) ? $data['img']  : "";
         
         Config::set('HEADER', $header);
         View::share('HEADER', $header );
