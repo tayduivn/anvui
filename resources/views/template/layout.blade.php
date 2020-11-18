@@ -616,6 +616,31 @@ $iconGGplay = '<svg width="143" height="48" viewBox="0 0 143 48" fill="none" xml
             }
         })
 
+        $('#js_newNews').owlCarousel({
+            loop:true,
+            responsiveClass:true,
+            autoplay: true,
+            autoplayTimeout:3000,
+            autoplayHoverPause: true,
+            nav: true,
+            margin: 32,
+            responsive:{
+                0:{
+                    items:1,
+                    dots:true,
+                    nav: false,
+                },
+                600:{
+                    items:2,
+                    dots:false,
+                },
+                1000:{
+                    items:3,
+                    dots:true,
+                }
+            }
+        })
+
         $('#js_supporter').owlCarousel({
             loop:true,
             responsiveClass:true,

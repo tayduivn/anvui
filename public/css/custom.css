@@ -1490,9 +1490,12 @@ margin-bottom: 24px;
     color: #084388;
     margin-bottom: 40px
 }
+
+.newNews__carousel,
 .custommerReview__carousel {
     position: relative;
 }
+.newNews__carousel .owl-nav button, 
 .custommerReview__carousel .owl-nav button {
     position: absolute;
     top: 40%;
