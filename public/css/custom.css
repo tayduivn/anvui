@@ -1495,6 +1495,9 @@ margin-bottom: 24px;
 .custommerReview__carousel {
     position: relative;
 }
+.newNews__carousel {
+    display: none;
+}
 .newNews__carousel .owl-nav button, 
 .custommerReview__carousel .owl-nav button {
     position: absolute;
