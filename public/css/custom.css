@@ -1535,6 +1535,10 @@ margin-bottom: 24px;
     right: 0;
 }
 
+.newNews__carousel .owl-nav button.owl-prev,
+.newNews__carousel .owl-nav button.owl-next {
+    top: 14%;
+}
 .newNews__carousel .owl-item img {
     height: 198px!important;
     object-fit: cover;

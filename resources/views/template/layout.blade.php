@@ -624,6 +624,7 @@ $iconGGplay = '<svg width="143" height="48" viewBox="0 0 143 48" fill="none" xml
             autoplayHoverPause: true,
             nav: true,
             margin: 32,
+            navText: ['<i class="fa fa-arrow-left" aria-hidden="true"></i>','<i class="fa fa-arrow-right" aria-hidden="true"></i>'],
             responsive:{
                 0:{
                     items:1,
