@@ -16,9 +16,9 @@
                 <div class="news-item__thumb" style="margin-bottom: 13px">
                     <a href="{{ $value->link }}" title="{{ $value['title'] }}"><img src="{{ $value['img'] }}" class="img-fluid" title="{{ $value['title'] }}" alt="{{ $value['title'] }}"></a>
                 </div>
-                <h2 class="news-item__title"><a href="{{ $value->link }}" title="{{ $value['title'] }}">{{ $value['title'] }}</a></h2>
+                <h2 class="news-item__title"><a href="{{ $value->link }}" title="{{ $value['title'] }}">{{ str_limit($value['title'],150,'...') }}</a></h2>
                 <div class="news-item__desc">
-                    {{ !empty($value['desc']) ? $value['desc'] : $value['seo']['meta_desc'] }}
+                    {{ !empty($value['desc']) ? str_limit($value['desc'],150,'...') : str_limit($value['seo']['meta_desc'],150,'...') }}
                 </div>
                 <p class="news-item__date">Ngày đăng: {{ $value['created_at_format'] }}</p>
             </div>

@@ -1523,14 +1523,21 @@ margin-bottom: 24px;
     border-radius: 8px 0px 0px 8px;
 }
 
+.newNews__carousel .owl-nav button.owl-prev, 
 .custommerReview__carousel .owl-nav button.owl-prev,
 .slideImage__carousel .owl-nav button.owl-prev {
     left: 0;
 }
 
+.newNews__carousel .owl-nav button.owl-next,
 .custommerReview__carousel .owl-nav button.owl-next,
 .slideImage__carousel .owl-nav button.owl-next {
     right: 0;
+}
+
+.newNews__carousel .owl-item img {
+    height: 198px!important;
+    object-fit: cover;
 }
 
 .introPage>h2 b {
