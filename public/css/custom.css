@@ -1496,7 +1496,7 @@ margin-bottom: 24px;
     position: relative;
 }
 .newNews__carousel {
-    display: none;
+    display: none!important;
 }
 .newNews__carousel .owl-nav button, 
 .custommerReview__carousel .owl-nav button {
