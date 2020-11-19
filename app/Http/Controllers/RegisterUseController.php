@@ -55,6 +55,7 @@ class RegisterUseController extends Controller
             $request->session()->flash('ACTION_STATUS', 'ERROR');
             $request->session()->flash('ACTION_MSG', 'Có lỗi xảy ra ! Xin lỗi bạn vì sự bất tiện.');
         }
+        return redirect()->back();
     }
 
         // $request->session()->flash('ACTION_STATUS', 'SUCCESS');
