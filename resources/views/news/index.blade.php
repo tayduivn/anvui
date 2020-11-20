@@ -47,7 +47,7 @@
                 margin-bottom: 40px;
             }
             .newsBanner__item img {
-                height: 330px;
+                height: 250px;
                 max-width: 100%;
             }
         </style>
