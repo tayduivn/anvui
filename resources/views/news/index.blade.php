@@ -31,6 +31,24 @@
             @endforeach
         </div>
 
+        <div class="newsBanner">
+            <div id="js_newBanner" class="newBanner__carousel owl-carousel owl-theme">
+                <div class="item newsBanner__item">
+                    <img src="https://anvui.vn/imgs/sw/sw_banner.png" alt="">
+                </div>
+                <div class="item newsBanner__item">
+                    <img src="https://anvui.vn/imgs/sw/sw_banner.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .newsBanner__item img {
+                height: 330px;
+                max-width: 100%;
+            }
+        </style>
+
         @foreach($data as $key => $value)
         <div class="news-item">
             <div class="row">
