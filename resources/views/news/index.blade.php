@@ -43,6 +43,9 @@
         </div>
 
         <style>
+            .newsBanner {
+                margin-bottom: 40px;
+            }
             .newsBanner__item img {
                 height: 330px;
                 max-width: 100%;

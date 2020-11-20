@@ -623,6 +623,7 @@ $iconGGplay = '<svg width="143" height="48" viewBox="0 0 143 48" fill="none" xml
             autoplayTimeout:3000,
             autoplayHoverPause: true,
             dots: true,
+            items: 1,
         })
 
         $('#js_newNews').owlCarousel({
