@@ -34,10 +34,13 @@
         <div class="newsBanner">
             <div id="js_newBanner" class="newBanner__carousel owl-carousel owl-theme">
                 <div class="item newsBanner__item">
-                    <img src="https://anvui.vn/imgs/sw/sw_banner.png" alt="">
+                    <img src="https://anvui.vn/imgs/banner/banner1.jpg" alt="">
                 </div>
                 <div class="item newsBanner__item">
-                    <img src="https://anvui.vn/imgs/sw/sw_banner.png" alt="">
+                    <img src="https://anvui.vn/imgs/banner/banner2.jpg" alt="">
+                </div>
+                <div class="item newsBanner__item">
+                    <img src="https://anvui.vn/imgs/banner/banner3.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -46,10 +49,10 @@
             .newsBanner {
                 margin-bottom: 40px;
             }
-            .newsBanner__item img {
+            /* .newsBanner__item img {
                 height: 250px;
                 max-width: 100%;
-            }
+            } */
         </style>
 
         @foreach($data as $key => $value)
