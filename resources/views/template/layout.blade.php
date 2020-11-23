@@ -351,7 +351,7 @@ $iconGGplay = '<svg width="143" height="48" viewBox="0 0 143 48" fill="none" xml
                                 <img src="{{ asset('imgs/partner/zalopay.png') }}" class="img-fluid" alt="{{ $HEADER['metaTitle'] }}">
                             </a>
                             <a href="https://vinid.net/" target="_BLANK" title="{{ $HEADER['metaTitle'] }}">
-                                <img src="{{ asset('imgs/partner/vinid.webp') }}" class="img-fluid" alt="{{ $HEADER['metaTitle'] }}">
+                                <img src="{{ asset('imgs/partner/vinid.png') }}" class="img-fluid" alt="{{ $HEADER['metaTitle'] }}">
                             </a>
                         </div>
                     </div>
