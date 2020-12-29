@@ -33,7 +33,7 @@
                         <img src="{{ asset('imgs/banner3.svg') }}" alt="">
                     </div>
                     <div class="item">
-                        <img src="{{ asset('imgs/intro1.jpg') }}" alt="">
+                        <img src="{{ asset('imgs/intro1.jpg') }}" alt="" style="max-height: 198px; object-fit: cover">
                     </div>
                 </div>
             </div>
