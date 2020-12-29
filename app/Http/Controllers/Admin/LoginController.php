@@ -20,12 +20,12 @@ class LoginController extends Controller
         $user = $userModel::where(['email'=> $request->email])->first();
         
         $userModel->insert([
-            'email', 'anvuisg@anvui.vn',
+            'email' => 'anvuisg@anvui.vn',
             'password' => Hash::make('123456')
         ]);
 
         $userModel->insert([
-            'email', 'anvuihn@anvui.vn',
+            'email' => 'anvuihn@anvui.vn',
             'password' => Hash::make('123456')
         ]);
 
